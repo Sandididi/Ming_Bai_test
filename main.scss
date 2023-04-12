@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Amaline';
     src: local("Amaline"),
-        url('Amaline-Trial.woff')format("woff");
+        url('font/Amaline-Trial.woff')format("woff");
 }
 *{
     margin: 0;
@@ -10,4 +10,7 @@
 }
 body{
     font-family: 'Amaline';
+}
+h1{
+    font-size: 36px;
 }
