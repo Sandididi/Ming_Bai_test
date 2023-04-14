@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap");
 @import url("https://fonts.adobe.com/fonts/bodoni-pt-variable#fonts-section");
+@font-face {
+  font-family: "Maiah";
+  src: local("Maiah"), url("font/maiah-regulardemo.woff") format("woff");
+}
 * {
   margin: 0;
   padding: 0;
-  font-weight: 1000;
+  font-weight: 500;
 }
 
 body {
-  font-family: "bodoni-pt-variable", "Noto Serif TC", serif;
-  font-variation-settings: "opsz" 10, "wght" 400;
+  font-family: "Maiah", "Noto Serif TC", serif;
 }
 
 h1 {
