@@ -4,11 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="main.css">
     <title>MingBai.Lab</title>
 </head>
 <body>
-    <h1>MingBai.Lab</h1>
-    <p></p>
+    <header>
+        <div class="navClass">
+            <div class="webLogo">
+                <h1>MingBai.Lab</h1>
+            </div>
+            <div id="navId">
+                <nav>
+                    <ul class="language">
+                        <a href="#zh-tw"><li class="translate lang" id="zh-tw" key="langBtnTw">中</li></a>|
+                        <a href="#en"><li class="translate lang" id="en-gb" key="langBtnEn">英</li></a>|
+                        <a href="#fr"><li class="translate lang" id="fr" key="langBtnFr">法</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="contain">
+        <h2 class="lang" key="testH2">測試</h2>
+        <p class="lang" key="intro">明白實驗所.</p>
+        
+    </div>
+    
+    <script>
+        var dataReload = document.querySelectorAll("[data-reload]");
+        var arrLang = {
+            "zh-tw":{
+                "langBtnTw":"中",
+                "langBtnEn":"英",
+                "langBtnFr":"法",
+                "testH2":"早安",
+                "intro":"明白實驗所"
+            },
+            "en-gb":{
+                "langBtnTw":"Zh",
+                "langBtnEn":"En",
+                "langBtnFr":"Fr",
+                "testH2":"Good Morning.",
+                "intro":"MingBai Lab."
+            },
+            "fr":{
+                "langBtnTw":"Zh",
+                "langBtnEn":"En",
+                "langBtnFr":"Fr",
+                "testH2":"Bonjour.",
+                "intro":"Laboratoire MingBai"
+            }
+        };
+        $(document).ready(function(){
+            var lang = 'zh-tw';
+            $(".lang").each(function(index, element){
+                $(this).text(arrLang[lang][$(this).attr("key")]);
+            });
+        });
+        $(".translate").click(function(){
+            var lang = $(this).attr("id");
+            
+            $(".lang").each(function(index, element){
+                $(this).text(arrLang[lang][$(this).attr("key")]);
+            });
+        });
+    </script>
 </body>
 </html>
