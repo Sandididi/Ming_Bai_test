@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap");
+@import url("https://fonts.adobe.com/fonts/bodoni-pt-variable#fonts-section");
+* {
+  font-family: "bodoni-pt-variable", "Noto Serif TC", serif;
+  font-variation-settings: "opsz" 10, "wght" 400;
+}
+
+a {
+  color: black;
+}/*# sourceMappingURL=404page.css.map */
