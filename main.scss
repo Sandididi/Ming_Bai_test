@@ -1,27 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap');
-@import url('https://fonts.adobe.com/fonts/bodoni-pt-variable#fonts-section');
-// @font-face {
-//     font-family: 'Amaline';
-//     src: local("Amaline"),
-//         url('font/Amaline-Trial.woff')format("woff");
-// }
-@font-face {
-    font-family: 'Maiah';
-    src: local("Maiah"),
-    url('font/maiah-regulardemo.woff')format("woff");
-}
+@import url("https://use.typekit.net/cfw8pqb.css");
+
 *{
     margin: 0;
     padding: 0;
-    font-weight: 500;
+    font-weight: 300;
 }
 body{
-    font-family: 'Maiah','Noto Serif TC', serif;
-    // font-family: "bodoni-pt-variable",'Noto Serif TC', serif;
-    // font-variation-settings: 'opsz' 10, 'wght' 400;
+    font-family: 'din-condensed','Noto Serif TC', sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 h1{
     font-size: 36px;
+    font-weight: 400;
 }
 .navClass{
     display: flex;
@@ -35,13 +27,12 @@ nav{
         display: flex;
         align-items: center;
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 400;
         a{
             text-decoration: none;
             color: black;
         }
         li{
-            font-weight: 700;
             padding: 0px 10px;
             list-style: none;
         }
@@ -52,12 +43,11 @@ nav{
     text-align: center;
     
     h2{
-        font-weight: 600;
         margin: 0;
         padding: 10;
+        font-weight: 400;
     }
     p{
-        font-weight: 600;
         margin: 0;
         padding: 20px;
     }
