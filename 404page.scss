@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap');
-// @import url('https://fonts.adobe.com/fonts/bodoni-pt-variable#fonts-section');
-@font-face {
-    font-family: 'Maiah';
-    src: local("Maiah"),
-    url('font/maiah-regulardemo.woff')format("woff");
-}
+@import url("https://use.typekit.net/cfw8pqb.css");
+
+
 *{
-    font-family: 'Maiah','Noto Serif TC', serif;
-    // font-family: "bodoni-pt-variable",'Noto Serif TC', serif;
-    // font-variation-settings: 'opsz' 10, 'wght' 400;
+    font-family: 'din-condensed','Noto Serif TC', sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 a{
     color: black;
