@@ -19,6 +19,7 @@ body{
 }
 
 
+
 .navClass{
     width: 100%;
     height: 58px;
@@ -36,6 +37,9 @@ body{
             width: 220px;
             fill: $black;
         }
+    }
+    .md_ontour{
+        display: none;
     }
 }
 .navList{
@@ -99,16 +103,17 @@ body{
     z-index: 3;
     img{
         width: 100%;
+        object-fit: cover;
     }
     .banner_nav_btn{
         position: absolute;
-        top: 100px;
+        top: 58px;
         left: 40px;
         z-index: 3;
         font-size: 28px;
         li{
             list-style: none;
-            margin: 20px 0px;
+            margin: 0px 0px 20px 0px;
             font-weight: 500;
             letter-spacing: 1px;
             color: $white;
@@ -175,3 +180,98 @@ body{
     padding: 20px 0px;
     font-size: 14px;
 }
+@media(max-width:960px){//平板
+    .navClass{
+        z-index: 10;
+        .navList{
+            display: flex;
+            padding: 40px 0px;
+            width: 100%;
+            position: absolute;
+            top: 58px;
+            left: 0;
+            background-color: rgba(#000,0.9);
+            color: $white;
+            ul{
+                flex-direction: column;
+                li{
+                    font-size: 40px;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    margin: 0;
+                    padding: 0px 0px 30px 0px;
+                    border-bottom: 0px solid #000;
+                }
+            }
+        }
+        .listitem{
+            flex: 1;
+            padding: 0px 0px 0px 52px;
+        }
+        .onTitem{
+            flex: 1;
+        }
+        .lg_ontour{
+            display: none;
+        }
+        .md_ontour{
+            display: flex;
+            color: $green;
+        }
+        #navId{
+            position: absolute;
+            right: 0;
+            top: 58px;
+            color: $white;
+            li{
+                color: $white;
+            }
+        }
+    }
+    .banner{
+        .banner_nav_btn{
+            display: none;
+        }
+        .banner_lang_btn{
+            display: none;
+        }
+    }
+    .cls-logo {
+        fill: #0000ff;
+    }
+}
+@media(max-width:720px){//行動版
+    .navClass{
+        .navList{
+            flex-direction: column;
+        }
+        .listitem{
+            text-align: left;
+            flex: 1;
+            padding: 0px 0px 0px 0px;
+            align-items: center;
+            li{
+                display: inline-block;
+                width: 163px;
+                padding: 0px 0px 40px 0px;
+            }
+            .lg_ontour{
+                display: none;
+            }
+        }
+        .onTitem{
+            border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            margin: 0px 16px;
+            padding: 40px 24px;
+        }
+        
+    }
+    .cls-logo {
+        fill: #231815;
+    }
+    
+}
+
+
+
