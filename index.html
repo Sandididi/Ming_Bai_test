@@ -60,8 +60,14 @@
 		c1.64,0,2.86-1.17,3.27-2.23l3.08-8.07c0.5-1.32-0.17-2.23-1.67-2.23C211.8,22.97,210.48,24.2,210.1,25.2z" />
                     </g>
                 </svg>
-            </a>
+                </a>
             </div>
+            <input type="checkbox" class="toggleSidebar" id="toggleSidebar">
+            <label for="toggleSidebar" class="toggleIcon">
+                <div class="Mline1"></div>
+                <div class="Mline2"></div>
+                <div class="Mline3"></div>
+            </label>
             <div class="navList">
                 <ul class="listitem">
                     <li>AboutUs</li>
@@ -72,22 +78,66 @@
                     <li>ContactUs</li>
                 </ul>
                 <ul class="onTitem md_ontour">
-                    <li>OnTour</li>
+                    <li>OnTour
+                        <span class="numBtns">
+                            <a class="active">1</a>|<a>2</a>|<a>3</a>|<a>4</a>
+                        </span>
+                    </li>
+                    <div class="tour-carousel-group textWhite">
+                        <a class="navArrow" href="http://" target="_blank" rel="noopener noreferrer">
+                            <img src="img/arrow_1.png" alt="">
+                        </a>
+                        <div class="carousel-text">
+                            <span class="showdate">2023/8/19(Sat)</span><br>
+                            <span class="program">淼淼之路―溺水《轉，看看有沒有什麼好地方》</span>
+                        </div>
+                        <div class="carousel-text">
+                            <span class="showdate">2023/8/25(Fri)&emsp; 2023/8/27(Sun)</span><br>
+                            <span class="program">淼淼之路―海水《沿著邊緣塗抹記號》身體郊遊版</span>
+                        </div>
+                        <div class="carousel-text">
+                            <span class="showdate">2023/8/25(Fri)&emsp; 2023/8/27(Sun)</span><br>
+                            <span class="program">淼淼之路―水水《轉，這不是一片海灘》</span>
+                        </div>
+                        <div class="carousel-text">
+                            <span class="showdate">2023/9/1(Fri)&emsp; 2023/9/2(Sun)</span><br>
+                            <span class="program">淼淼之路―井水《烏腳之謎》</span>
+                        </div>
+                    </div>
+                    <div class="tour-carousel-group textGray">
+                        <div class="carousel-text ">
+                            <span class="showdate">2023/8/19(Sat)</span><br>
+                            <span class="program">淼淼之路―溺水《轉，看看有沒有什麼好地方》</span>
+                        </div>
+                        <div class="carousel-text">
+                            <span class="showdate">2023/8/25(Fri)&emsp; 2023/8/27(Sun)</span><br>
+                            <span class="program">淼淼之路―海水《沿著邊緣塗抹記號》身體郊遊版</span>
+                        </div>
+                        <div class="carousel-text">
+                            <span class="showdate">2023/8/25(Fri)&emsp; 2023/8/27(Sun)</span><br>
+                            <span class="program">淼淼之路―水水《轉，這不是一片海灘》</span>
+                        </div>
+                        <div class="carousel-text">
+                            <span class="showdate">2023/9/1(Fri)&emsp; 2023/9/2(Sun)</span><br>
+                            <span class="program">淼淼之路―井水《烏腳之謎》</span>
+                        </div>
+                    </div>
                 </ul>
+                <div id="navId">
+                    <nav class="language">
+                        <a href="#zh-tw">
+                            <li class="translate lang" id="zh-tw" key="langBtnTw">中</li>
+                        </a>|
+                        <a href="#en">
+                            <li class="translate lang" id="en-gb" key="langBtnEn">英</li>
+                        </a>|
+                        <a href="#fr">
+                            <li class="translate lang" id="fr" key="langBtnFr">法</li>
+                        </a>
+                    </nav>
+                </div>
             </div>
-            <div id="navId">
-                <nav class="language">
-                    <a href="#zh-tw">
-                        <li class="translate lang" id="zh-tw" key="langBtnTw">中</li>
-                    </a>|
-                    <a href="#en">
-                        <li class="translate lang" id="en-gb" key="langBtnEn">英</li>
-                    </a>|
-                    <a href="#fr">
-                        <li class="translate lang" id="fr" key="langBtnFr">法</li>
-                    </a>
-                </nav>
-            </div>
+            
         </div>
 
     </header>
@@ -187,6 +237,7 @@
     </div>
 
     <script>
+
         var dataReload = document.querySelectorAll("[data-reload]");
         var arrLang = {
             "zh-tw": {
@@ -212,10 +263,17 @@
             }
         };
         $(document).ready(function () {
+            //lang
             var lang = 'zh-tw';
             $(".lang").each(function (index, element) {
                 $(this).text(arrLang[lang][$(this).attr("key")]);
             });
+
+            // //hambtn
+            // $('.hamBtn').click(function(){
+            //     $(this).toggleClass('hamActive');
+            //     $(this).toggleClass('hamburger');
+            // });
         });
         $(".translate").click(function () {
             var lang = $(this).attr("id");
@@ -223,6 +281,16 @@
             $(".lang").each(function (index, element) {
                 $(this).text(arrLang[lang][$(this).attr("key")]);
             });
+        });
+
+        //smalldevice
+        $(window).resize(function(){
+            var smalldevice = $(window).height();
+            if(smalldevice<730){
+                $(".textGray").hide();
+            }else{
+                $(".textGray").show();
+            }
         });
     </script>
 </body>

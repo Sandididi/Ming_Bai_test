@@ -4,6 +4,7 @@
 $white:#fff;
 $black:#231815;
 $green:#83ff00;
+$gray:#7f7f7f;
 
 *{
     margin: 0;
@@ -17,9 +18,9 @@ body{
     font-style: normal;
     height: 200vh;
 }
-
-
-
+#toggleSidebar{
+    display: none;
+}
 .navClass{
     width: 100%;
     height: 58px;
@@ -32,40 +33,62 @@ body{
     z-index: 2;
     .webLogo{
         cursor: pointer;
-        padding: 0px 40px;
+        padding: 0px 20px 0px 40px;
         svg{
             width: 220px;
             fill: $black;
         }
+    }
+    .hamBtn{
+        display: none;
     }
     .md_ontour{
         display: none;
     }
 }
 .navList{
+    opacity: 1;
+    width: 70%;
     ul{
         display: flex;
     }
     li{
         list-style: none;
-        margin: 0px 20px;
+        margin: 0px 20px 0px 0px;
         padding: 0px 5px 5px 5px;
         font-size: 28px;
         cursor: pointer;
-        border-bottom: 2px solid $white;
-        transition: 0.3s;
-        &:hover{
-            border-bottom: 2px solid $green;
+        &::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            border-radius: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $green;
+            transition: 0.3s;
         }
+        &:hover::after{
+            width: 80%;
+        }
+    }
+    #navId{
+        position: absolute;
+        bottom: 0%;
+        right: 0;
     }
 }
 
 .language{
+    position: relative;
+    right: 0;
     display: flex;
     align-items: center;
     font-size: 20px;
     font-weight: 400;
-    padding: 0px 40px;
+    padding: 0px 20px;
     a{
         text-decoration: none;
         color: black;
@@ -73,11 +96,22 @@ body{
     li{
         margin: 0px 5px;
         padding: 0px 5px 5px 5px;
+        font-size: 18px;
         list-style: none;
-        border-bottom: 2px solid $white;
-        transition: 0.3s;
-        &:hover{
-            border-bottom: 2px solid $green;
+        &::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            border-radius: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $green;
+            transition: 0.3s;
+        }
+        &:hover::after{
+            width: 100%;
         }
     }
 }
@@ -113,7 +147,7 @@ body{
         font-size: 28px;
         li{
             list-style: none;
-            margin: 0px 0px 20px 0px;
+            margin: 0px 0px 10px 0px;
             font-weight: 500;
             letter-spacing: 1px;
             color: $white;
@@ -144,7 +178,6 @@ body{
         z-index: 3;
         li{
             color: $white;
-            border-bottom: 0px solid $white;
             &:hover{
                 color: $green;
             }
@@ -180,8 +213,38 @@ body{
     padding: 20px 0px;
     font-size: 14px;
 }
-@media(max-width:960px){//平板
+
+@media(max-width:1060px){//平板
+    
     .navClass{
+        .toggleIcon{
+            width: 40px;
+            height: 40px;
+            margin-right: 40px;
+            transform: translateY(-50%);
+            top: 45%;
+            cursor: pointer;
+            div{
+                background-color: $black;
+                width: 100%;
+                height: 2px;
+                border-radius: 2px;
+                transition: all 0.3s;
+            }
+            .Mline1{
+                transform: rotate(45deg);
+                top: 35%;
+            }
+            .Mline2{
+                margin: 12px 0px;
+                opacity: 0;
+            }
+            .Mline3{
+                transform: rotate(-45deg);
+                top: -35%;
+            }
+            
+        }
         z-index: 10;
         .navList{
             display: flex;
@@ -192,6 +255,7 @@ body{
             left: 0;
             background-color: rgba(#000,0.9);
             color: $white;
+            transition: all 0.3s;
             ul{
                 flex-direction: column;
                 li{
@@ -200,16 +264,46 @@ body{
                     letter-spacing: 2px;
                     margin: 0;
                     padding: 0px 0px 30px 0px;
-                    border-bottom: 0px solid #000;
+                    transition: 0.3s;
+                    &:hover{
+                        color: $green;
+                    }
+                    &:hover::after{
+                        width: 0%;
+                    }
                 }
             }
         }
         .listitem{
             flex: 1;
+            justify-content: space-around;
             padding: 0px 0px 0px 52px;
         }
         .onTitem{
-            flex: 1;
+            flex: 1.2;
+            .numBtns{
+                color: $gray;
+                position: absolute;
+                bottom: 30px;
+                right: 52px;
+                font-size: 20px;
+                a{
+                    padding: 0px 5px;
+                }
+                .active{
+                    color: $white;
+                }
+            }
+            .navArrow{
+                position: absolute;
+                height: 48px;
+                right: 52px;
+                top: 65%;
+                img{
+                    width: 52px;
+                    transform: translateY(-50%);
+                }
+            }
         }
         .lg_ontour{
             display: none;
@@ -221,7 +315,7 @@ body{
         #navId{
             position: absolute;
             right: 0;
-            top: 58px;
+            bottom: 10px;
             color: $white;
             li{
                 color: $white;
@@ -236,24 +330,106 @@ body{
             display: none;
         }
     }
-    .cls-logo {
-        fill: #0000ff;
+    .tour-carousel-group{
+        height: 48px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        .carousel-text{
+            width: 70%;
+            height: 48px;
+            overflow: hidden;
+            .showdate{
+                font-size: 16px;
+            }
+            .program{
+                display: block;
+                position: absolute;
+                margin-top: 3px;
+                font-size: 20px;
+                width: 180%;
+            }
+        }
+    }
+    .textWhite{
+        color: $white;
+        .carousel-text{
+            transform: translateY(0%);
+            .program{
+                animation: marquee 6s linear;
+                animation-delay: 1s;
+                &:hover{
+                    animation: marqueeLoop 8s linear infinite;
+                    animation-delay: -3.8s;
+                }
+            }
+        }
+    }
+    .textGray{
+        color: $gray;
+        .carousel-text{
+            transform: translateY(-100%);
+        }
+    }
+    input[type="checkbox"]:checked ~ .toggleIcon {
+        .Mline1{
+            transform: rotate(0deg);
+            top: 0%;
+        } 
+        .Mline2{
+            opacity: 1;
+        }
+        .Mline3{
+            transform: rotate(0deg);
+            top: 0%;
+        }
+        &:hover{
+            .Mline2{
+                width: 75%;
+                margin-left: 12px;
+            }
+            .Mline3{
+                width: 60%;
+                margin-left: 16px;
+            }
+        }
+    }
+    // input[type="checkbox"]:checked ~ .toggleIcon > .Mline2{
+    //     opacity: 1;
+    // }
+    // input[type="checkbox"]:checked ~ .toggleIcon > .Mline3{
+    //     transform: rotate(0deg);
+    //     top: 0%;
+    // }
+    
+    input[type="checkbox"]:checked ~ .navList{
+        opacity: 0;
     }
 }
+
+
 @media(max-width:720px){//行動版
     .navClass{
+        .webLogo{
+            padding: 0px 15px;
+        }
         .navList{
             flex-direction: column;
+            height: calc(100vh - 58px);
+            padding: 24px 0px;
+            ul{
+                li{
+                    font-size: 36px;
+                    padding: 0px 0px 20px 0px;
+                }
+            }
         }
         .listitem{
+            justify-content: space-around;
             text-align: left;
-            flex: 1;
-            padding: 0px 0px 0px 0px;
+            padding: 0;
             align-items: center;
             li{
-                display: inline-block;
-                width: 163px;
-                padding: 0px 0px 40px 0px;
+                width: 138px;
             }
             .lg_ontour{
                 display: none;
@@ -261,17 +437,69 @@ body{
         }
         .onTitem{
             border-top: 1px solid $white;
-            border-bottom: 1px solid $white;
             margin: 0px 16px;
-            padding: 40px 24px;
+            padding: 12px;
+            flex: 1;
+            .numBtns{
+                bottom: 26px;
+                right: 0px;
+                font-size: 16px;
+                a{
+                    padding: 0px 3px;
+                }
+            }
+            .navArrow{
+                height: 48px;
+                right: 0px;
+                top: 60%;
+                img{
+                    width: 52px;
+                    transform: translateY(-50%);
+                }
+            }
         }
         
+        #navId{
+            bottom: 60px;
+        }
+        .language{
+            padding: 0px 8px;
+        }
     }
-    .cls-logo {
-        fill: #231815;
+    .logo{
+        z-index: 10;
+        width: 120px;
+        margin: 15px 17px;
     }
-    
+    .tour-carousel-group{
+        height: 46px;
+        margin-bottom: 30px;
+        .carousel-text{
+            width: 80%;
+            height: 45px;
+            .showdate{
+                font-size: 16px;
+            }
+            .program{
+                margin-top: 3px;
+                font-size: 18px;
+                width: 180%;
+            }
+        }
+    }
 }
 
+@keyframes marquee {
+    0% { left: 0%; }
+    93% { left: -150%; opacity: 1;}
+    94% { left: -150%; opacity: 0;}
+    95% {opacity: 0; left: 0%;}
+    100% {opacity: 1; left: 0%;}
+  }
+
+@keyframes marqueeLoop {
+    0% { left: 150%; }
+    100% { left: -150%;}
+  }
 
 
