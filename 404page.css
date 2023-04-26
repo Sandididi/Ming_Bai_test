@@ -4,6 +4,40 @@
   font-family: "din-condensed", "Noto Serif TC", sans-serif;
   font-weight: 300;
   font-style: normal;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20vh;
+  left: 50vw;
+}
+.card .bgImg {
+  width: 70%;
+  max-width: 450px;
+}
+.card .mask {
+  position: absolute;
+  top: 12%;
+}
+.card .mask img {
+  width: 70%;
+  max-width: 400px;
+}
+.card a {
+  position: absolute;
+  right: 5px;
+  bottom: -3px;
+}
+.card a img {
+  width: 70%;
+  max-width: 180px;
 }
 
 a {
