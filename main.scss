@@ -21,6 +21,8 @@ body{
 #toggleSidebar{
     display: none;
 }
+
+
 .navClass{
     width: 100%;
     height: 58px;
@@ -78,6 +80,56 @@ body{
         position: absolute;
         bottom: 0%;
         right: 0;
+    }
+}
+.onTitem{
+    .tour-carousel-group{
+        height: 55px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        .carousel-text{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-right: 52px;
+        }
+        a{
+            text-decoration: none;
+            color: $white;
+        }
+        .show{
+            width: 80%;
+            height: 48px;
+            overflow: hidden;
+            margin-top: 8px;
+            .date{
+                font-size: 16px;
+                letter-spacing: 1.5px;
+            }
+            .program{
+                width: 180%;
+                font-size: 18px;
+            }
+            &:hover{
+                .program{
+                    animation: marqueeLoop 6s -3s linear infinite;
+                }
+            }
+        }
+        img{
+            height: 32px;
+            margin-bottom: 4px;
+        }
+    }
+    .textWhite{
+        transform: translateY(-0px);
+        transition: 0.5s;
+        color: $white;
+    }
+    .textGray{
+        transform: translateY(-55px);
+        transition: 0.5s;
+        color: $gray;
     }
 }
 
@@ -213,6 +265,63 @@ body{
     padding: 20px 0px;
     font-size: 14px;
 }
+input[type="radio"]{
+    display: none;
+}
+///carouseltranslateY
+#numBtn1[type="radio"]:checked ~ .tour-carousel-group{
+    .textWhite{
+        transform: translateY(0px);
+    }
+    .textGray{
+        transform: translateY(-55px);
+    }
+}
+#numBtn2[type="radio"]:checked ~ .tour-carousel-group{
+    .textWhite{
+        transform: translateY(-55px);
+    }
+    .textGray{
+        transform: translateY(-110px);
+    }
+}
+#numBtn3[type="radio"]:checked ~ .tour-carousel-group{
+    .textWhite{
+        transform: translateY(-110px);
+    }
+    .textGray{
+        transform: translateY(-165px);
+    }
+}
+#numBtn4[type="radio"]:checked ~ .tour-carousel-group{
+    .textWhite{
+        transform: translateY(-165px);
+    }
+    .textGray{
+        transform: translateY(0px);
+    }
+}
+///numberChangeColor
+#numBtn1[type="radio"]:checked ~ .carousel-manual{
+    #numBtn1{
+        color: $white;
+    }
+}
+#numBtn2[type="radio"]:checked ~ .carousel-manual{
+    #numBtn2{
+        color: $white;
+    }
+}
+#numBtn3[type="radio"]:checked ~ .carousel-manual{
+    #numBtn3{
+        color: $white;
+    }
+}
+#numBtn4[type="radio"]:checked ~ .carousel-manual{
+    #numBtn4{
+        color: $white;
+    }
+}
 
 @media(max-width:1060px){//平板
     
@@ -263,7 +372,7 @@ body{
                     font-weight: 400;
                     letter-spacing: 2px;
                     margin: 0;
-                    padding: 0px 0px 30px 0px;
+                    padding: 0px 0px 20px 0px;
                     transition: 0.3s;
                     &:hover{
                         color: $green;
@@ -281,29 +390,35 @@ body{
         }
         .onTitem{
             flex: 1.2;
+            .carousel-manual{
+                position: absolute;
+                top: -42px;
+                right: 52px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .manual-btn{
+                    color: $gray;
+                    display: inline-block;
+                    cursor: pointer;
+                    padding: 0px 4px;
+                    transition: 0.5s;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+                .manual-btn:not(:last-child){
+                    border-right: 1px solid $gray;
+                    padding-right: 12px;
+                    margin-right: 8px; 
+                }
+            }
             .numBtns{
-                color: $gray;
                 position: absolute;
-                bottom: 30px;
-                right: 52px;
-                font-size: 20px;
-                a{
-                    padding: 0px 5px;
-                }
-                .active{
-                    color: $white;
-                }
+                top: -50px;
+                right: 20px;
             }
-            .navArrow{
-                position: absolute;
-                height: 48px;
-                right: 52px;
-                top: 65%;
-                img{
-                    width: 52px;
-                    transform: translateY(-50%);
-                }
-            }
+            
         }
         .lg_ontour{
             display: none;
@@ -330,46 +445,8 @@ body{
             display: none;
         }
     }
-    .tour-carousel-group{
-        height: 48px;
-        overflow: hidden;
-        margin-bottom: 40px;
-        .carousel-text{
-            width: 70%;
-            height: 48px;
-            overflow: hidden;
-            .showdate{
-                font-size: 16px;
-            }
-            .program{
-                display: block;
-                position: absolute;
-                margin-top: 3px;
-                font-size: 20px;
-                width: 180%;
-            }
-        }
-    }
-    .textWhite{
-        color: $white;
-        .carousel-text{
-            transform: translateY(0%);
-            .program{
-                animation: marquee 6s linear;
-                animation-delay: 1s;
-                &:hover{
-                    animation: marqueeLoop 8s linear infinite;
-                    animation-delay: -3.8s;
-                }
-            }
-        }
-    }
-    .textGray{
-        color: $gray;
-        .carousel-text{
-            transform: translateY(-100%);
-        }
-    }
+    
+    
     input[type="checkbox"]:checked ~ .toggleIcon {
         .Mline1{
             transform: rotate(0deg);
@@ -393,18 +470,14 @@ body{
             }
         }
     }
-    // input[type="checkbox"]:checked ~ .toggleIcon > .Mline2{
-    //     opacity: 1;
-    // }
-    // input[type="checkbox"]:checked ~ .toggleIcon > .Mline3{
-    //     transform: rotate(0deg);
-    //     top: 0%;
-    // }
     
     input[type="checkbox"]:checked ~ .navList{
         opacity: 0;
     }
+
 }
+
+
 
 
 @media(max-width:720px){//行動版
@@ -440,21 +513,20 @@ body{
             margin: 0px 16px;
             padding: 12px;
             flex: 1;
-            .numBtns{
-                bottom: 26px;
-                right: 0px;
-                font-size: 16px;
-                a{
-                    padding: 0px 3px;
-                }
+            .carousel-manual{
+                top: -40px;
+                right: 0;
             }
-            .navArrow{
-                height: 48px;
-                right: 0px;
-                top: 60%;
-                img{
-                    width: 52px;
-                    transform: translateY(-50%);
+            .tour-carousel-group{
+                .carousel-text{
+                    margin-right: 0;
+                }
+                .show{
+                    width: 70%;
+                    .date{
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                    }
                 }
             }
         }
@@ -471,35 +543,18 @@ body{
         width: 120px;
         margin: 15px 17px;
     }
-    .tour-carousel-group{
-        height: 46px;
-        margin-bottom: 30px;
-        .carousel-text{
-            width: 80%;
-            height: 45px;
-            .showdate{
-                font-size: 16px;
-            }
-            .program{
-                margin-top: 3px;
-                font-size: 18px;
-                width: 180%;
-            }
+    .footer{
+        p{
+            width: 30%;
         }
     }
+    
 }
 
-@keyframes marquee {
-    0% { left: 0%; }
-    93% { left: -150%; opacity: 1;}
-    94% { left: -150%; opacity: 0;}
-    95% {opacity: 0; left: 0%;}
-    100% {opacity: 1; left: 0%;}
-  }
+
 
 @keyframes marqueeLoop {
     0% { left: 150%; }
     100% { left: -150%;}
-  }
-
+}
 

@@ -79,6 +79,53 @@ body {
   right: 0;
 }
 
+.onTitem .tour-carousel-group {
+  height: 55px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.onTitem .tour-carousel-group .carousel-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-right: 52px;
+}
+.onTitem .tour-carousel-group a {
+  text-decoration: none;
+  color: #fff;
+}
+.onTitem .tour-carousel-group .show {
+  width: 80%;
+  height: 48px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.onTitem .tour-carousel-group .show .date {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+.onTitem .tour-carousel-group .show .program {
+  width: 180%;
+  font-size: 18px;
+}
+.onTitem .tour-carousel-group .show:hover .program {
+  animation: marqueeLoop 6s -3s linear infinite;
+}
+.onTitem .tour-carousel-group img {
+  height: 32px;
+  margin-bottom: 4px;
+}
+.onTitem .textWhite {
+  transform: translateY(0px);
+  transition: 0.5s;
+  color: #fff;
+}
+.onTitem .textGray {
+  transform: translateY(-55px);
+  transition: 0.5s;
+  color: #7f7f7f;
+}
+
 .language {
   position: relative;
   right: 0;
@@ -211,6 +258,54 @@ body {
   font-size: 14px;
 }
 
+input[type=radio] {
+  display: none;
+}
+
+#numBtn1[type=radio]:checked ~ .tour-carousel-group .textWhite {
+  transform: translateY(0px);
+}
+#numBtn1[type=radio]:checked ~ .tour-carousel-group .textGray {
+  transform: translateY(-55px);
+}
+
+#numBtn2[type=radio]:checked ~ .tour-carousel-group .textWhite {
+  transform: translateY(-55px);
+}
+#numBtn2[type=radio]:checked ~ .tour-carousel-group .textGray {
+  transform: translateY(-110px);
+}
+
+#numBtn3[type=radio]:checked ~ .tour-carousel-group .textWhite {
+  transform: translateY(-110px);
+}
+#numBtn3[type=radio]:checked ~ .tour-carousel-group .textGray {
+  transform: translateY(-165px);
+}
+
+#numBtn4[type=radio]:checked ~ .tour-carousel-group .textWhite {
+  transform: translateY(-165px);
+}
+#numBtn4[type=radio]:checked ~ .tour-carousel-group .textGray {
+  transform: translateY(0px);
+}
+
+#numBtn1[type=radio]:checked ~ .carousel-manual #numBtn1 {
+  color: #fff;
+}
+
+#numBtn2[type=radio]:checked ~ .carousel-manual #numBtn2 {
+  color: #fff;
+}
+
+#numBtn3[type=radio]:checked ~ .carousel-manual #numBtn3 {
+  color: #fff;
+}
+
+#numBtn4[type=radio]:checked ~ .carousel-manual #numBtn4 {
+  color: #fff;
+}
+
 @media (max-width: 1060px) {
   .navClass {
     z-index: 10;
@@ -261,7 +356,7 @@ body {
     font-weight: 400;
     letter-spacing: 2px;
     margin: 0;
-    padding: 0px 0px 30px 0px;
+    padding: 0px 0px 20px 0px;
     transition: 0.3s;
   }
   .navClass .navList ul li:hover {
@@ -278,28 +373,33 @@ body {
   .navClass .onTitem {
     flex: 1.2;
   }
-  .navClass .onTitem .numBtns {
-    color: #7f7f7f;
+  .navClass .onTitem .carousel-manual {
     position: absolute;
-    bottom: 30px;
+    top: -42px;
     right: 52px;
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .navClass .onTitem .numBtns a {
-    padding: 0px 5px;
+  .navClass .onTitem .carousel-manual .manual-btn {
+    color: #7f7f7f;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 4px;
+    transition: 0.5s;
   }
-  .navClass .onTitem .numBtns .active {
+  .navClass .onTitem .carousel-manual .manual-btn:hover {
     color: #fff;
   }
-  .navClass .onTitem .navArrow {
-    position: absolute;
-    height: 48px;
-    right: 52px;
-    top: 65%;
+  .navClass .onTitem .carousel-manual .manual-btn:not(:last-child) {
+    border-right: 1px solid #7f7f7f;
+    padding-right: 12px;
+    margin-right: 8px;
   }
-  .navClass .onTitem .navArrow img {
-    width: 52px;
-    transform: translateY(-50%);
+  .navClass .onTitem .numBtns {
+    position: absolute;
+    top: -50px;
+    right: 20px;
   }
   .navClass .lg_ontour {
     display: none;
@@ -322,46 +422,6 @@ body {
   }
   .banner .banner_lang_btn {
     display: none;
-  }
-  .tour-carousel-group {
-    height: 48px;
-    overflow: hidden;
-    margin-bottom: 40px;
-  }
-  .tour-carousel-group .carousel-text {
-    width: 70%;
-    height: 48px;
-    overflow: hidden;
-  }
-  .tour-carousel-group .carousel-text .showdate {
-    font-size: 16px;
-  }
-  .tour-carousel-group .carousel-text .program {
-    display: block;
-    position: absolute;
-    margin-top: 3px;
-    font-size: 20px;
-    width: 180%;
-  }
-  .textWhite {
-    color: #fff;
-  }
-  .textWhite .carousel-text {
-    transform: translateY(0%);
-  }
-  .textWhite .carousel-text .program {
-    animation: marquee 6s linear;
-    animation-delay: 1s;
-  }
-  .textWhite .carousel-text .program:hover {
-    animation: marqueeLoop 8s linear infinite;
-    animation-delay: -3.8s;
-  }
-  .textGray {
-    color: #7f7f7f;
-  }
-  .textGray .carousel-text {
-    transform: translateY(-100%);
   }
   input[type=checkbox]:checked ~ .toggleIcon .Mline1 {
     transform: rotate(0deg);
@@ -417,22 +477,19 @@ body {
     padding: 12px;
     flex: 1;
   }
-  .navClass .onTitem .numBtns {
-    bottom: 26px;
-    right: 0px;
-    font-size: 16px;
+  .navClass .onTitem .carousel-manual {
+    top: -40px;
+    right: 0;
   }
-  .navClass .onTitem .numBtns a {
-    padding: 0px 3px;
+  .navClass .onTitem .tour-carousel-group .carousel-text {
+    margin-right: 0;
   }
-  .navClass .onTitem .navArrow {
-    height: 48px;
-    right: 0px;
-    top: 60%;
+  .navClass .onTitem .tour-carousel-group .show {
+    width: 70%;
   }
-  .navClass .onTitem .navArrow img {
-    width: 52px;
-    transform: translateY(-50%);
+  .navClass .onTitem .tour-carousel-group .show .date {
+    font-size: 14px;
+    letter-spacing: 1px;
   }
   .navClass #navId {
     bottom: 60px;
@@ -445,42 +502,8 @@ body {
     width: 120px;
     margin: 15px 17px;
   }
-  .tour-carousel-group {
-    height: 46px;
-    margin-bottom: 30px;
-  }
-  .tour-carousel-group .carousel-text {
-    width: 80%;
-    height: 45px;
-  }
-  .tour-carousel-group .carousel-text .showdate {
-    font-size: 16px;
-  }
-  .tour-carousel-group .carousel-text .program {
-    margin-top: 3px;
-    font-size: 18px;
-    width: 180%;
-  }
-}
-@keyframes marquee {
-  0% {
-    left: 0%;
-  }
-  93% {
-    left: -150%;
-    opacity: 1;
-  }
-  94% {
-    left: -150%;
-    opacity: 0;
-  }
-  95% {
-    opacity: 0;
-    left: 0%;
-  }
-  100% {
-    opacity: 1;
-    left: 0%;
+  .footer p {
+    width: 30%;
   }
 }
 @keyframes marqueeLoop {
