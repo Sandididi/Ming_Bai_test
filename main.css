@@ -137,7 +137,7 @@ body {
 }
 .language a {
   text-decoration: none;
-  color: black;
+  color: #231815;
 }
 .language li {
   margin: 0px 5px;
@@ -345,7 +345,9 @@ input[type=radio] {
     position: absolute;
     top: 58px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
     color: #fff;
     transition: all 0.3s;
   }
