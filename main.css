@@ -51,7 +51,9 @@ body {
 
 .navList {
   opacity: 1;
-  width: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .navList ul {
   display: flex;
@@ -79,10 +81,11 @@ body {
 .navList li:hover::after {
   width: 80%;
 }
+.navList .listitem {
+  margin: 0 auto;
+}
 .navList #navId {
-  position: absolute;
-  bottom: 0%;
-  right: 0;
+  position: relative;
 }
 
 .onTitem .tour-carousel-group {
@@ -167,6 +170,9 @@ body {
 .language li:hover::after {
   width: 100%;
 }
+.language #zh-tw {
+  font-size: 16px;
+}
 
 .logo {
   position: fixed;
@@ -203,8 +209,8 @@ body {
 .banner .banner_nav_btn li {
   font-family: "DINcondensed_Bold", "Noto Serif TC", sans-serif;
   list-style: none;
-  margin: 0px 0px 10px 0px;
-  font-weight: 500;
+  margin: 0px 0px 16px 0px;
+  font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
   transition: 0.3s;
@@ -238,6 +244,9 @@ body {
 }
 .banner .banner_lang_btn li:hover {
   color: #83ff00;
+}
+.banner .banner_lang_btn #zh-tw {
+  font-size: 16px;
 }
 
 .contain {
@@ -315,7 +324,7 @@ input[type=radio] {
   color: #fff;
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1140px) {
   .navClass {
     z-index: 10;
   }
@@ -348,6 +357,7 @@ input[type=radio] {
   }
   .navClass .navList {
     display: flex;
+    align-items: start;
     padding: 40px 0px;
     width: 100%;
     position: absolute;
@@ -464,7 +474,7 @@ input[type=radio] {
   .navClass .navList {
     flex-direction: column;
     height: calc(100vh - 58px);
-    padding: 24px 0px;
+    padding: 24px 10px;
   }
   .navClass .navList ul li {
     font-size: 36px;

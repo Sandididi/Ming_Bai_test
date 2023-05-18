@@ -38,6 +38,7 @@ body{
     background-color: #fff;
     z-index: 2;
     .webLogo{
+        
         cursor: pointer;
         padding: 0px 20px 0px 40px;
         img{
@@ -55,7 +56,9 @@ body{
 }
 .navList{
     opacity: 1;
-    width: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
     ul{
         display: flex;
     }
@@ -82,10 +85,11 @@ body{
             width: 80%;
         }
     }
+    .listitem{
+        margin: 0 auto;
+    }
     #navId{
-        position: absolute;
-        bottom: 0%;
-        right: 0;
+        position: relative;
     }
 }
 .onTitem{
@@ -173,6 +177,9 @@ body{
             width: 100%;
         }
     }
+    #zh-tw{
+        font-size: 16px;
+    }
 }
 ///logo
 .logo{
@@ -207,8 +214,8 @@ body{
         li{
             font-family: 'DINcondensed_Bold', 'Noto Serif TC', sans-serif;
             list-style: none;
-            margin: 0px 0px 10px 0px;
-            font-weight: 500;
+            margin: 0px 0px 16px 0px;
+            font-weight: 700;
             letter-spacing: 1px;
             color: $white;
             transition: 0.3s;
@@ -242,6 +249,9 @@ body{
             &:hover{
                 color: $green;
             }
+        }
+        #zh-tw{
+            font-size: 16px;
         }
     }
 }
@@ -332,7 +342,7 @@ input[type="radio"]{
     }
 }
 
-@media(max-width:1060px){//平板
+@media(max-width:1140px){//平板
     
     .navClass{
         .toggleIcon{
@@ -366,6 +376,7 @@ input[type="radio"]{
         z-index: 10;
         .navList{
             display: flex;
+            align-items: start;
             padding: 40px 0px;
             width: 100%;
             position: absolute;
@@ -498,7 +509,7 @@ input[type="radio"]{
         .navList{
             flex-direction: column;
             height: calc(100vh - 58px);
-            padding: 24px 0px;
+            padding: 24px 10px;
             ul{
                 li{
                     font-size: 36px;
