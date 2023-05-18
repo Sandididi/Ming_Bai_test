@@ -12,6 +12,10 @@ $gray:#7f7f7f;
     font-weight: 300;
     position: relative;
 }
+@font-face {
+    font-family: 'DINcondensed_Bold';
+    src: url('font/DINCondensed-Bold.woff') format('woff');
+}
 body{
     font-family: 'din-condensed','Noto Serif TC', sans-serif;
     font-weight: 300;
@@ -36,9 +40,10 @@ body{
     .webLogo{
         cursor: pointer;
         padding: 0px 20px 0px 40px;
-        svg{
+        img{
             width: 220px;
             fill: $black;
+            transform: translateY(16%);
         }
     }
     .hamBtn{
@@ -55,6 +60,7 @@ body{
         display: flex;
     }
     li{
+        font-family: 'DINcondensed_Bold', 'Noto Serif TC', sans-serif;
         list-style: none;
         margin: 0px 20px 0px 0px;
         padding: 0px 5px 5px 5px;
@@ -146,6 +152,7 @@ body{
         color: $black;
     }
     li{
+        font-family: 'DINcondensed_Bold', 'Noto Serif TC', sans-serif;
         margin: 0px 5px;
         padding: 0px 5px 5px 5px;
         font-size: 18px;
@@ -198,6 +205,7 @@ body{
         z-index: 3;
         font-size: 28px;
         li{
+            font-family: 'DINcondensed_Bold', 'Noto Serif TC', sans-serif;
             list-style: none;
             margin: 0px 0px 10px 0px;
             font-weight: 500;

@@ -7,6 +7,10 @@
   position: relative;
 }
 
+@font-face {
+  font-family: "DINcondensed_Bold";
+  src: url("font/DINCondensed-Bold.woff") format("woff");
+}
 body {
   font-family: "din-condensed", "Noto Serif TC", sans-serif;
   font-weight: 300;
@@ -33,9 +37,10 @@ body {
   cursor: pointer;
   padding: 0px 20px 0px 40px;
 }
-.navClass .webLogo svg {
+.navClass .webLogo img {
   width: 220px;
   fill: #231815;
+  transform: translateY(16%);
 }
 .navClass .hamBtn {
   display: none;
@@ -52,6 +57,7 @@ body {
   display: flex;
 }
 .navList li {
+  font-family: "DINcondensed_Bold", "Noto Serif TC", sans-serif;
   list-style: none;
   margin: 0px 20px 0px 0px;
   padding: 0px 5px 5px 5px;
@@ -140,6 +146,7 @@ body {
   color: #231815;
 }
 .language li {
+  font-family: "DINcondensed_Bold", "Noto Serif TC", sans-serif;
   margin: 0px 5px;
   padding: 0px 5px 5px 5px;
   font-size: 18px;
@@ -194,6 +201,7 @@ body {
   font-size: 28px;
 }
 .banner .banner_nav_btn li {
+  font-family: "DINcondensed_Bold", "Noto Serif TC", sans-serif;
   list-style: none;
   margin: 0px 0px 10px 0px;
   font-weight: 500;
