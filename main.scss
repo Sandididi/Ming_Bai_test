@@ -87,6 +87,65 @@ body{
     }
     .listitem{
         margin: 0 auto;
+        li{
+            padding: 0px 16px;
+        }
+        .artists{
+            width: 80px;
+            transition: all 0.3s;
+            &::before{
+                content: "✖";
+                position: absolute;
+                font-size: 20px;
+                top: 0%;
+                right: 0%;
+                display: inline-block;
+                transform: translate(-50%,0%) rotate(45deg);
+                transition: all 0.3s;
+            }
+            &:hover{
+                &::before{
+                    color: $green;
+                }
+            }
+            ul{
+                position: absolute;
+                top: 46px;
+                display: flex;
+                flex-direction: column;
+                height: 0px;
+                overflow: hidden;
+                transition: all 0.3s;
+                li{
+                    border-right: $gray 1px solid;
+                    border-left: $gray 1px solid;
+                    border-bottom: $gray 1px solid;
+                    width: 180px;
+                    padding: 8px 16px;
+                    background-color: $white;
+                    transition: 0.3s;
+                    &::before{
+                        content: '- ';
+                        position: relative;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                    &:hover{
+                        background-color: $gray;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .artOpen{
+            &::before{
+                transform: translate(-80%,5%) rotate(0deg);
+            }
+            ul{
+                height: 145px;
+            }
+        }
     }
     #navId{
         position: relative;
@@ -389,11 +448,11 @@ input[type="radio"]{
             ul{
                 flex-direction: column;
                 li{
-                    font-size: 40px;
+                    font-size: 32px;
                     font-weight: 400;
                     letter-spacing: 2px;
                     margin: 0;
-                    padding: 0px 0px 20px 0px;
+                    padding: 0px 0px 12px 0px;
                     transition: 0.3s;
                     &:hover{
                         color: $green;
@@ -408,6 +467,33 @@ input[type="radio"]{
             flex: 1;
             justify-content: space-around;
             padding: 0px 0px 0px 52px;
+            .artists{
+                ul{
+                    position: relative;
+                    top: 8px;
+                    width: 180px;
+                    li{
+                        background-color: rgba($white,0.0);
+                        font-size: 20px;
+                        border: 0px;
+                        padding: 8px;
+                    }
+                }
+                &::before{
+                    font-size: 24px;
+                    display: inline-block;
+                    transform: translate(120%,0%) rotate(45deg);
+                }
+            }
+            .artOpen{
+                color: $green;
+                &::before{
+                    transform: translate(120%,0%) rotate(0deg);
+                }
+                ul{
+                    height: 145px;
+                }
+            }
         }
         .onTitem{
             flex: 1.2;
@@ -508,7 +594,8 @@ input[type="radio"]{
         }
         .navList{
             flex-direction: column;
-            height: calc(100vh - 58px);
+            width: calc(100% - 20px);
+            height: calc(100vh - 100px);
             padding: 24px 10px;
             ul{
                 li{
@@ -521,17 +608,39 @@ input[type="radio"]{
             justify-content: space-around;
             text-align: left;
             padding: 0;
-            align-items: center;
+            align-items: start;
             li{
                 width: 138px;
             }
             .lg_ontour{
                 display: none;
             }
+            .artists{
+                ul{
+                    li{
+                        background-color: rgba($white,0.0);
+                        font-size: 20px;
+                        border: 0px;
+                        padding: 8px;
+                    }
+                }
+                &::before{
+                    font-size: 24px;
+                    transform: translate(150%,8%) rotate(45deg);
+                }
+            }
+            .artOpen{
+                &::before{
+                    transform: translate(150%,8%) rotate(0deg);
+                }
+                ul{
+                    height: 145px;
+                }
+            }
         }
         .onTitem{
             border-top: 1px solid $white;
-            margin: 0px 16px;
+            margin: 0px auto;
             padding: 12px;
             flex: 1;
             .carousel-manual{
@@ -553,7 +662,8 @@ input[type="radio"]{
         }
         
         #navId{
-            bottom: 60px;
+            right: 16px;
+            bottom: 16px;
         }
         .language{
             padding: 0px 8px;

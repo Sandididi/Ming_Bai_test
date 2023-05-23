@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap");
 @import url("https://use.typekit.net/cfw8pqb.css");
 * {
@@ -83,6 +84,61 @@ body {
 }
 .navList .listitem {
   margin: 0 auto;
+}
+.navList .listitem li {
+  padding: 0px 16px;
+}
+.navList .listitem .artists {
+  width: 80px;
+  transition: all 0.3s;
+}
+.navList .listitem .artists::before {
+  content: "✖";
+  position: absolute;
+  font-size: 20px;
+  top: 0%;
+  right: 0%;
+  display: inline-block;
+  transform: translate(-50%, 0%) rotate(45deg);
+  transition: all 0.3s;
+}
+.navList .listitem .artists:hover::before {
+  color: #83ff00;
+}
+.navList .listitem .artists ul {
+  position: absolute;
+  top: 46px;
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.navList .listitem .artists ul li {
+  border-right: #7f7f7f 1px solid;
+  border-left: #7f7f7f 1px solid;
+  border-bottom: #7f7f7f 1px solid;
+  width: 180px;
+  padding: 8px 16px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.navList .listitem .artists ul li::before {
+  content: "- ";
+  position: relative;
+}
+.navList .listitem .artists ul li::after {
+  display: none;
+}
+.navList .listitem .artists ul li:hover {
+  background-color: #7f7f7f;
+  color: #fff;
+}
+.navList .listitem .artOpen::before {
+  transform: translate(-80%, 5%) rotate(0deg);
+}
+.navList .listitem .artOpen ul {
+  height: 145px;
 }
 .navList #navId {
   position: relative;
@@ -373,11 +429,11 @@ input[type=radio] {
     flex-direction: column;
   }
   .navClass .navList ul li {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 400;
     letter-spacing: 2px;
     margin: 0;
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 12px 0px;
     transition: 0.3s;
   }
   .navClass .navList ul li:hover {
@@ -390,6 +446,31 @@ input[type=radio] {
     flex: 1;
     justify-content: space-around;
     padding: 0px 0px 0px 52px;
+  }
+  .navClass .listitem .artists ul {
+    position: relative;
+    top: 8px;
+    width: 180px;
+  }
+  .navClass .listitem .artists ul li {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+    border: 0px;
+    padding: 8px;
+  }
+  .navClass .listitem .artists::before {
+    font-size: 24px;
+    display: inline-block;
+    transform: translate(120%, 0%) rotate(45deg);
+  }
+  .navClass .listitem .artOpen {
+    color: #83ff00;
+  }
+  .navClass .listitem .artOpen::before {
+    transform: translate(120%, 0%) rotate(0deg);
+  }
+  .navClass .listitem .artOpen ul {
+    height: 145px;
   }
   .navClass .onTitem {
     flex: 1.2;
@@ -473,7 +554,8 @@ input[type=radio] {
   }
   .navClass .navList {
     flex-direction: column;
-    height: calc(100vh - 58px);
+    width: calc(100% - 20px);
+    height: calc(100vh - 100px);
     padding: 24px 10px;
   }
   .navClass .navList ul li {
@@ -484,7 +566,7 @@ input[type=radio] {
     justify-content: space-around;
     text-align: left;
     padding: 0;
-    align-items: center;
+    align-items: start;
   }
   .navClass .listitem li {
     width: 138px;
@@ -492,9 +574,25 @@ input[type=radio] {
   .navClass .listitem .lg_ontour {
     display: none;
   }
+  .navClass .listitem .artists ul li {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+    border: 0px;
+    padding: 8px;
+  }
+  .navClass .listitem .artists::before {
+    font-size: 24px;
+    transform: translate(150%, 8%) rotate(45deg);
+  }
+  .navClass .listitem .artOpen::before {
+    transform: translate(150%, 8%) rotate(0deg);
+  }
+  .navClass .listitem .artOpen ul {
+    height: 145px;
+  }
   .navClass .onTitem {
     border-top: 1px solid #fff;
-    margin: 0px 16px;
+    margin: 0px auto;
     padding: 12px;
     flex: 1;
   }
@@ -513,7 +611,8 @@ input[type=radio] {
     letter-spacing: 1px;
   }
   .navClass #navId {
-    bottom: 60px;
+    right: 16px;
+    bottom: 16px;
   }
   .navClass .language {
     padding: 0px 8px;
