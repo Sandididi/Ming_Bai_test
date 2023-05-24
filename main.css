@@ -108,6 +108,7 @@ body {
 .navList .listitem .artists ul {
   position: absolute;
   top: 46px;
+  left: 0;
   display: flex;
   flex-direction: column;
   height: 0px;
