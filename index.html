@@ -30,7 +30,7 @@
             </label>
             <div class="navList">
                 <ul class="listitem">
-                    <li class="artists artOpen">About
+                    <li class="artists">About
                         <ul>
                             <li>&ensp;Ming Baï Lab</li>
                             <li>&ensp;Ming Chieh Lee</li>
@@ -208,7 +208,13 @@
         <img src="https://fakeimg.pl/1920x1080/aaa/">
         <div class="banner_nav_btn">
             <ul>
-                <li>About</li>
+                <li class="artists">About
+                    <ul>
+                        <li>&ensp;Ming Baï Lab</li>
+                        <li>&ensp;Ming Chieh Lee</li>
+                        <li>&ensp;Baï Lee</li>
+                    </ul>
+                </li>
                 <li>Calendar</li>
                 <li>OnTour</li>
                 <li>Projects</li>
@@ -313,6 +319,7 @@
         $(".artists").click(function(){
             $(this).toggleClass("artOpen", 1000);
         });
+        
 
 
         //smalldevice

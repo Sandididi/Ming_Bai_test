@@ -38,7 +38,6 @@ body{
     background-color: #fff;
     z-index: 2;
     .webLogo{
-        
         cursor: pointer;
         padding: 0px 20px 0px 40px;
         img{
@@ -117,6 +116,7 @@ body{
                 overflow: hidden;
                 transition: all 0.3s;
                 li{
+                    cursor: pointer;
                     border-right: $gray 1px solid;
                     border-left: $gray 1px solid;
                     border-bottom: $gray 1px solid;
@@ -220,6 +220,7 @@ body{
         padding: 0px 5px 5px 5px;
         font-size: 18px;
         list-style: none;
+        cursor: pointer;
         &::after{
             content: '';
             width: 0%;
@@ -281,6 +282,41 @@ body{
             cursor: pointer;
             &:hover{
                 color: $green;
+            }
+        }
+        .artists{
+            transition: all 0.3s;
+            ul{
+                transition: all 0.3s;
+                height: 0;
+                overflow: hidden;
+                li{
+                    font-size: 24px;
+                    &::before{
+                        content: '- ';
+                        position: relative;
+                    }
+                }
+                li:nth-child(1){
+                    padding-top: 10px;
+                }
+            }
+            &::before{
+                position: absolute;
+                content: "✖";
+                font-size: 20px;
+                right: 60px;
+                display: inline-block;
+                transform: translate(0%,4%) rotate(45deg);
+                transition: all 0.3s;
+            }
+        }
+        .artOpen{
+            &::before{
+                transform: translate(-20%,4%) rotate(0deg);
+            }
+            ul{
+                height: 120px;
             }
         }
         .socialMedia{
@@ -594,13 +630,15 @@ input[type="radio"]{
         }
         .navList{
             flex-direction: column;
+            align-items: end;
             width: calc(100% - 20px);
             height: calc(100vh - 100px);
             padding: 24px 10px;
             ul{
+                justify-content: start;
                 li{
                     font-size: 36px;
-                    padding: 0px 0px 20px 0px;
+                    padding: 0px 0px 28px 0px;
                 }
             }
         }
@@ -608,7 +646,6 @@ input[type="radio"]{
             justify-content: space-around;
             text-align: left;
             padding: 0;
-            align-items: start;
             li{
                 width: 138px;
             }
@@ -619,7 +656,6 @@ input[type="radio"]{
                 ul{
                     li{
                         background-color: rgba($white,0.0);
-                        font-size: 20px;
                         border: 0px;
                         padding: 8px;
                     }
@@ -634,7 +670,7 @@ input[type="radio"]{
                     transform: translate(150%,8%) rotate(0deg);
                 }
                 ul{
-                    height: 145px;
+                    height: 110px;
                 }
             }
         }
@@ -662,8 +698,9 @@ input[type="radio"]{
         }
         
         #navId{
-            right: 16px;
-            bottom: 16px;
+            position: relative;
+            bottom: 8px;
+            right: 0px;
         }
         .language{
             padding: 0px 8px;
