@@ -1,0 +1,69 @@
+.para {
+  max-width: 1260px;
+  background-color: #eee;
+  padding: 16px;
+  margin: 0 auto;
+}
+.para h3 {
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  padding: 16px 0px;
+  text-align: left;
+}
+.para .perfor_box {
+  margin: 0px 0px 30px 0px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  border-bottom: solid #231815 1px;
+}
+.para .perfor_box .perforImg {
+  width: 200px;
+  height: 150px;
+  background-color: #222;
+}
+.para .perfor_box .perforContext {
+  flex: 2;
+  height: 150px;
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.para .perfor_box .perforContext div {
+  text-align: left;
+}
+.para .perfor_box .perforContext .date {
+  font-size: 20px;
+  padding: 4px 0px;
+}
+.para .perfor_box .perforContext .showName {
+  flex: 2;
+  font-size: 24px;
+  font-weight: 600;
+}
+.para .perfor_box .perforContext .location {
+  position: relative;
+  font-size: 16px;
+  padding: 8px 0px;
+  font-weight: 600;
+}
+.para .perfor_box .perforContext .location svg {
+  position: relative;
+  bottom: -3px;
+  width: 16px;
+  margin: 0px 4px;
+  fill: #231815;
+}
+.para .perfor_box .getTicket {
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+  border: 1px solid #231815;
+  border-bottom: 0px;
+  font-size: 30px;
+  line-height: 45px;
+  font-family: "Din Kursivschrift Breit";
+  transform: translateY(1px);
+}/*# sourceMappingURL=ontour.css.map */

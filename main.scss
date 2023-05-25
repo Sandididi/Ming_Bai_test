@@ -16,6 +16,12 @@ $gray:#7f7f7f;
     font-family: 'DINcondensed_Bold';
     src: url('font/DINCondensed-Bold.woff') format('woff');
 }
+@font-face {
+    font-family: 'Din Kursivschrift Breit';
+    font-style: normal;
+    font-weight: normal;
+    src: url('font/DinKursivschriftBreit.woff') format('woff');
+    }
 body{
     font-family: 'din-condensed','Noto Serif TC', sans-serif;
     font-weight: 300;
@@ -25,7 +31,6 @@ body{
 #toggleSidebar{
     display: none;
 }
-
 
 .navClass{
     width: 100%;
@@ -362,7 +367,7 @@ body{
     }
 }
 ///內文
-.contain{
+.content{
     top: 620px;
     margin: 0px auto;
     text-align: center;
