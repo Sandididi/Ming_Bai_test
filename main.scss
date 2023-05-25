@@ -43,7 +43,7 @@ body{
         img{
             width: 220px;
             fill: $black;
-            transform: translateY(16%);
+            transform: translateY(4%);
         }
     }
     .hamBtn{
@@ -211,6 +211,7 @@ body{
     font-size: 20px;
     font-weight: 400;
     padding: 0px 20px;
+    transform: translateY(4px);
     a{
         text-decoration: none;
         color: $black;
