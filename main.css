@@ -22,7 +22,7 @@ body {
   font-family: "din-condensed", "Noto Serif TC", sans-serif;
   font-weight: 300;
   font-style: normal;
-  height: 200vh;
+  height: 300vh;
 }
 
 #toggleSidebar {
@@ -88,6 +88,10 @@ body {
 .navList li:hover::after {
   width: 80%;
 }
+.navList li a {
+  text-decoration: none;
+  color: #231815;
+}
 .navList .listitem {
   margin: 0 auto;
 }
@@ -150,6 +154,9 @@ body {
 }
 .navList #navId {
   position: relative;
+}
+.navList .logo {
+  display: none;
 }
 
 .onTitem .tour-carousel-group {
@@ -596,6 +603,7 @@ input[type=radio] {
   }
   input[type=checkbox]:checked ~ .navList {
     opacity: 0;
+    display: none;
   }
 }
 @media (max-width: 720px) {
@@ -615,6 +623,11 @@ input[type=radio] {
   .navClass .navList ul li {
     font-size: 36px;
     padding: 0px 0px 28px 0px;
+  }
+  .navClass .navList .logo {
+    display: block;
+    position: absolute;
+    bottom: 24px;
   }
   .navClass .listitem {
     justify-content: space-around;
@@ -671,7 +684,7 @@ input[type=radio] {
     padding: 0px 8px;
   }
   .logo {
-    z-index: 10;
+    z-index: -10;
     width: 120px;
     margin: 15px 17px;
   }

@@ -26,7 +26,7 @@ body{
     font-family: 'din-condensed','Noto Serif TC', sans-serif;
     font-weight: 300;
     font-style: normal;
-    height: 200vh;
+    height: 300vh;
 }
 #toggleSidebar{
     display: none;
@@ -87,6 +87,10 @@ body{
         }
         &:hover::after{
             width: 80%;
+        }
+        a{
+            text-decoration: none;
+            color: $black;
         }
     }
     .listitem{
@@ -155,6 +159,9 @@ body{
     }
     #navId{
         position: relative;
+    }
+    .logo{
+        display: none;
     }
 }
 .onTitem{
@@ -632,8 +639,9 @@ input[type="radio"]{
     
     input[type="checkbox"]:checked ~ .navList{
         opacity: 0;
+        display: none;
     }
-
+    
 }
 
 
@@ -656,6 +664,11 @@ input[type="radio"]{
                     font-size: 36px;
                     padding: 0px 0px 28px 0px;
                 }
+            }
+            .logo{
+                display: block;
+                position: absolute;
+                bottom:  24px;
             }
         }
         .listitem{
@@ -723,7 +736,7 @@ input[type="radio"]{
         }
     }
     .logo{
-        z-index: 10;
+        z-index: -10;
         width: 120px;
         margin: 15px 17px;
     }
