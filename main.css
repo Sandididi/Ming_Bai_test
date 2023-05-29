@@ -296,6 +296,14 @@ body {
   transition: 0.3s;
   cursor: pointer;
 }
+.banner .banner_nav_btn li a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: #fff;
+}
+.banner .banner_nav_btn li a:hover {
+  color: #83ff00;
+}
 .banner .banner_nav_btn li:hover {
   color: #83ff00;
 }
@@ -565,6 +573,8 @@ input[type=radio] {
   }
   .navClass .md_ontour {
     display: flex;
+  }
+  .navClass .md_ontour li a {
     color: #83ff00;
   }
   .navClass #navId {

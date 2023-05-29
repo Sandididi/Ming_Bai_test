@@ -303,6 +303,14 @@ body{
             color: $white;
             transition: 0.3s;
             cursor: pointer;
+            a{
+                transition: 0.3s;
+                text-decoration: none;
+                color: $white;
+            }
+            a:hover{
+                color: $green;
+            }
             &:hover{
                 color: $green;
             }
@@ -591,7 +599,11 @@ input[type="radio"]{
         }
         .md_ontour{
             display: flex;
-            color: $green;
+            li{
+                a{
+                    color: $green;
+                }
+            }
         }
         #navId{
             position: absolute;
