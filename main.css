@@ -117,7 +117,7 @@ body {
 }
 .navList .listitem .artists ul {
   position: absolute;
-  top: 46px;
+  top: 45px;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -144,6 +144,12 @@ body {
 }
 .navList .listitem .artists ul li:hover {
   background-color: #7f7f7f;
+  color: #fff;
+}
+.navList .listitem .artists ul a {
+  color: #231815;
+}
+.navList .listitem .artists ul a:hover {
   color: #fff;
 }
 .navList .listitem .artOpen::before {
@@ -187,6 +193,7 @@ body {
 .onTitem .tour-carousel-group .show .program {
   width: 180%;
   font-size: 18px;
+  line-height: 27px;
 }
 .onTitem .tour-carousel-group .show:hover .program {
   animation: marqueeLoop 6s -3s linear infinite;
@@ -374,6 +381,7 @@ body {
   top: 620px;
   margin: 0px auto;
   text-align: center;
+  max-width: 1280px;
 }
 .content h2 {
   margin: 0;
@@ -383,6 +391,13 @@ body {
 .content p {
   margin: 0;
   padding: 20px;
+}
+.content h3 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: left;
+  padding: 0px 20px;
+  line-height: 1.8;
 }
 
 .footer {
@@ -537,6 +552,9 @@ input[type=radio] {
   .navClass .listitem .artOpen ul {
     height: 145px;
   }
+  .navClass .listitem .artOpen ul li a {
+    color: #83ff00;
+  }
   .navClass .onTitem {
     flex: 1.2;
   }
@@ -574,6 +592,9 @@ input[type=radio] {
   .navClass .md_ontour {
     display: flex;
   }
+  .navClass .md_ontour li {
+    color: #83ff00;
+  }
   .navClass .md_ontour li a {
     color: #83ff00;
   }
@@ -591,6 +612,9 @@ input[type=radio] {
   }
   .banner .banner_lang_btn {
     display: none;
+  }
+  .content {
+    padding: 0px 40px;
   }
   input[type=checkbox]:checked ~ .toggleIcon .Mline1 {
     transform: rotate(0deg);
@@ -697,6 +721,14 @@ input[type=radio] {
     z-index: -10;
     width: 120px;
     margin: 15px 17px;
+  }
+  .content {
+    padding: 0px 20px;
+  }
+  .content h3 {
+    width: 320px;
+    padding: 0;
+    margin: 0 auto;
   }
   .footer p {
     width: 30%;

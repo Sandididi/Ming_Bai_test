@@ -12,14 +12,7 @@ body{
     }
 }
 .content{
-    max-width: 1040px;
-    h3{
-        font-size: 48px;
-        font-weight: 700;
-        text-align: left;
-        padding: 0px 20px;
-        line-height: 1.8;
-    }
+    
     .performances{
         display: flex;
         flex-wrap: wrap;
@@ -27,23 +20,40 @@ body{
         justify-content: space-between;
     }
     .items{
-        margin: 20px 20px 80px 20px ;
+        margin: 20px 10px 80px 10px ;
         width: 300px;
+        transition: 0.3s all;
         cursor: pointer;
+        a{
+            color: $black;
+            text-decoration: none;
+        }
         .itemImg{
             width: 300px;
             height: 200px;
+            transition: 0.3s all;
             background-image: url(../img/showitem_02.jpg);
-            background-size: cover;
+            background-size: 300px 225px;
             background-position: center;
             background-repeat: no-repeat;
         }
+        
         .perfor_Name{
+            flex: 2;
             display: block;
             font-size: 24px;
             font-weight: 700;
             text-align: justify;
-            padding: 4px;
+            padding: 2px 4px;
+        }
+        .date{
+            flex: 1;
+        }
+        &:hover{
+            background-color: #eee;
+            .itemImg{
+                background-size: 320px 240px;
+            }
         }
     }
     .items:nth-child(1){
@@ -69,7 +79,7 @@ body{
     .date{
         text-align: left;
         font-size: 22px;
-        padding: 0px 4px;
+        padding: 2px 4px;
         font-weight: 500;
         letter-spacing: 1px;
     }
@@ -87,40 +97,45 @@ body{
 }
 @media(max-width:1140px){//平板
     .content{
-        padding: 0px 40px;
+        .items{
+            margin: 20px 20px 80px 20px ;
+        }
     }
 }
 @media(max-width:767px){ //行動版
     .content{
-        padding: 0px 20px;
-        h3{
-            width: 320px;
-            padding: 0;
-            margin: 0 auto;
-        }
         .performances{
-            align-items: center;
             justify-content: center;
             flex-direction: column;
         }
         
         .items{
             width: 320px;
-            margin: 20px 20px -40px 20px ;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            a{
+                width: 100%;
+            }
             .itemImg{
                 min-width: 320px;
                 height: 300px;
+                background-size: cover;
             }
             .innerinfo{
-                height: 120px;
-                top: -120px;
+                position: absolute;
+                width: 312px;
+                bottom: 0;
                 transition: 0.3s;
-                padding: 4px;
+                padding: 8px 4px;
                 background-color: rgba($black,0.8);
                 transform: translateY(0%);
                 color: $white;
             }
             &:hover{
+                .itemImg{
+                    background-size: cover;
+                }
                 .innerinfo{
                     color: $green;
                 }
