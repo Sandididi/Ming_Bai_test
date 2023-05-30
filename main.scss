@@ -26,7 +26,7 @@ body{
     font-family: 'din-condensed','Noto Serif TC', sans-serif;
     font-weight: 300;
     font-style: normal;
-    height: 300vh;
+    height: auto;
 }
 #toggleSidebar{
     display: none;
@@ -390,8 +390,9 @@ body{
 }
 ///內文
 .content{
-    top: 620px;
+    top: 580px;
     margin: 0px auto;
+    padding-top: 20px;
     text-align: center;
     max-width: 1280px;
     h2{
@@ -413,16 +414,34 @@ body{
 }
 
 ///footer
+.footerspace{
+    height: 200px;
+}
 .footer{
-    position: absolute;
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 100px;
     bottom: 0;
     text-align: center;
     padding: 20px 0px;
     font-size: 14px;
+    .socialMedia{
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 100%;
+        }
+        li{
+            list-style: none;
+            width: 30px;
+            margin: 0px 4px;
+            cursor: pointer;
+        }
+    }
 }
 input[type="radio"]{
     display: none;
@@ -644,7 +663,7 @@ input[type="radio"]{
         }
     }
     .content{
-        padding: 0px 40px;
+        padding: 20px 40px;
     }
     
     input[type="checkbox"]:checked ~ .toggleIcon {
@@ -775,7 +794,7 @@ input[type="radio"]{
         margin: 15px 17px;
     }
     .content{
-        padding: 0px 20px;
+        padding: 20px 40px;
         h3{
             width: 320px;
             padding: 0;

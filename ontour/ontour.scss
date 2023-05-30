@@ -3,7 +3,7 @@ $black: #231815;
 $green: #83ff00;
 $gray: #7f7f7f;
 body{
-    height: 350vh;
+    height: auto;
 }
 .banner {
     .imgs {
@@ -84,10 +84,8 @@ body{
         letter-spacing: 1px;
     }
 }
-.footer{
-    flex-direction: column;
-    bottom: 0;
-}
+
+
 .lang-test{
     position: relative;
     display: block;

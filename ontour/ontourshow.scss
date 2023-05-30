@@ -1,0 +1,297 @@
+$white: #fff;
+$black: #231815;
+$green: #83ff00;
+$gray: #7f7f7f;
+
+.banner {
+    .imgs {
+        background-image: url(../img/banner_ontour.jpg);
+        animation: none;
+    }
+}
+
+.breadcrumb{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    a{
+        text-decoration: none;
+        color: $gray;
+        font-size: 20px;
+        &::after{
+            content: " > ";
+            position: absolute;
+            color: $black;
+            right: -12px;
+        }
+    }
+    .now_page{
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        margin-left: 16px;
+    }
+}
+.content{
+    h3{
+        span{
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        margin-top: 32px;
+        margin-bottom: 8px;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        padding: 0px 16px;
+    }
+}
+.program{
+    display: flex;
+}
+.programText{
+    flex: 1;
+    p{
+        text-align: left;
+        padding: 8px 20px;
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        color: $gray;
+    }
+    h5{
+        text-align: left;
+        margin-top: 16px;
+        padding: 8px 20px;
+        font-size: 24px;
+        font-family: 'Din Kursivschrift Breit', sans-serif;
+    }
+    .intro{
+        color: $black;
+        font-weight: 400;
+    }
+    .detail{
+        font-size: 18px;
+        margin-top: 16px;
+    }
+    .credits{
+        font-size: 20px;
+        line-height: 2;
+        font-weight: 600;
+        padding: 0px 20px;
+    }
+}
+.programImg{
+    flex: 1;
+    padding: 0px 16px;
+    img{
+        width: 100%;
+    }
+}
+.season{
+    display: flex;
+    margin-top: 72px;
+}
+.seasonintro{
+    flex: 1;
+    h5{
+        text-align: left;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 16px 20px;
+    }
+    p{
+        text-align: left;
+        padding: 8px 20px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.8;
+    }
+    .img{
+        padding: 8px 16px;
+        img{
+            width: 100%;
+        }
+    }
+}
+.tic_collect{
+    padding: 0px 20px;
+    flex: 1;
+    li{
+        position: relative;
+        list-style: none;
+        display: flex;
+        cursor: pointer;
+        border-bottom: 1px solid $black;
+        padding: 8px;
+        .time{
+            font-family: 'DINcondensed_Bold';
+            text-align: left;
+            font-size: 22px;
+            width: 105px;
+            padding: 8px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p{
+                padding: 0;
+            }
+            span{
+                font-size: 52px;
+                display: block;
+                font-weight: 500;
+            }
+        }
+        .tic_name{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+            padding: 8px;
+        }
+        .tic_btn{
+            position: absolute;
+            width: 120px;
+            height: 55px;
+            right: 0;
+            bottom: -1px;
+            border: 1px solid $black;
+            transition: 0.3s;
+            overflow: hidden;
+            img{
+                transition: 0.3s;
+                width: 200%;
+                transform: translateX(-50%);
+            }
+        }
+        .tic_title{
+            font-size: 28px;
+            font-weight: 700;
+            text-align: left;
+        }
+        .locat{
+            display: flex;
+            align-items: start;
+            svg{
+                width: 15px;
+                padding: 6px 0px;
+            }
+            p{
+                padding: 0px 8px;
+                text-align: left;
+                width: 310px;
+            }
+        }
+        &:hover{
+            .time{
+                color: $green;
+                background-color: $gray;
+            }
+            .tic_name{
+                color: $green;
+                background-color: $gray;
+                .locat{
+                    svg{fill:$white;}
+                    color: $white;
+                }
+            }
+            .tic_btn{
+                border: 1px solid rgba($black,0);
+                img{
+                    transform: translateX(0%);
+                }
+            }
+        }
+    }
+}
+@media(max-width:1140px){//平板
+    .program{
+        flex-direction: column;
+    }
+    .season{
+        flex-direction: column;
+    }
+}
+@media(max-width:720px){//行動版
+    .content{
+        .program{
+            h3{
+                span{
+                    line-height: 1.5;
+                }
+                width: 100%;
+                padding: 8px 20px;
+                margin: 32px 0px 8px 0px;
+                line-height: 1.2;
+            }
+        }
+    }
+    .tic_collect{
+        padding: 0;
+        li{
+            align-items: center;
+            border-bottom: 1px solid $white;
+            padding: 0;
+            padding-bottom: 40px;
+            margin-bottom: 8px;
+            .time{
+                font-size: 18px;
+                padding-bottom: 8px;
+                height: 120px;
+                width: 90px;
+                span{
+                    font-size: 42px;
+                }
+            }
+            .tic_name{
+                justify-content: start;
+                padding-bottom: 8px;
+                height: 120px;
+                .tic_title{
+                    font-size: 20px;
+                }
+            }
+            .tic_btn{
+                display: none;
+            }
+            .locat{
+                p{
+                    width: auto;
+                }
+            }
+            &::after{
+                content: "GetTicket";
+                font-size: 24px;
+                font-family: 'Din Kursivschrift Breit', sans-serif;
+                border: 1px solid $gray;
+                width: calc(100% - 2px);
+                height: 36px;
+                line-height: 36px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $white;
+                bottom: 2px;
+            }
+            &:hover{
+                .time{
+                    background-color: none;
+                }
+                .tic_name{
+                    background-color: none;
+                }
+                &::after{
+                    border: 1px solid $gray;
+                    color: $green;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+}

@@ -22,7 +22,7 @@
                     <img src="img/fontlogo.svg" alt="" srcset="">
                 </a>
             </div>
-            <input type="checkbox" class="toggleSidebar" id="toggleSidebar">
+            <input type="checkbox" class="toggleSidebar" id="toggleSidebar" checked="checked">
             <label for="toggleSidebar" class="toggleIcon">
                 <div class="Mline1"></div>
                 <div class="Mline2"></div>
@@ -215,15 +215,20 @@
     </div>
     <div class="content">
         <h3>about</h3>
-        
+
         <div class="lang-test">
             <h2 class="lang" key="testH2">早安</h2>
             <p class="lang" key="intro">明白實驗所.</p>
         </div>
-        
-    </div>
-    <div class="footer">
-        <p>Copyright &copy; 2023 MingBaiLab. All rights reserved.</p>
+
+        <div class="footer">
+            <ul class="socialMedia">
+                <li><a href=""><img src="../img/socialmedia_fb.png" alt=""></a></li>
+                <li><a href=""><img src="../img/socialmedia_ig.png" alt=""></a></li>
+                <li><a href=""><img src="../img/socialmedia_vimeo.png" alt=""></a></li>
+            </ul>
+            <p>Copyright &copy; 2023 MingBaiLab. All rights reserved.</p>
+        </div>
     </div>
 
     <script>
@@ -309,11 +314,11 @@
         $("#fr").click(function () {
             $(".program").css("font-size", "22px");
         });
-        
-        $(".artists").click(function(){
+
+        $(".artists").click(function () {
             $(this).toggleClass("artOpen", 1000);
         });
-        
+
 
 
         //smalldevice
