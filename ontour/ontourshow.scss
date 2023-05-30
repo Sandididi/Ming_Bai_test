@@ -151,7 +151,6 @@ $gray: #7f7f7f;
             flex: 3;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             transition: 0.3s;
             padding: 8px;
         }
@@ -197,7 +196,9 @@ $gray: #7f7f7f;
                 color: $green;
                 background-color: $gray;
                 .locat{
-                    svg{fill:$white;}
+                    svg{
+                        fill:$white;
+                    }
                     color: $white;
                 }
             }
@@ -216,6 +217,10 @@ $gray: #7f7f7f;
     }
     .season{
         flex-direction: column;
+        margin-top: 36px;
+    }
+    .tic_collect{
+        margin-top: 36px;
     }
 }
 @media(max-width:720px){//行動版
@@ -261,6 +266,7 @@ $gray: #7f7f7f;
                 display: none;
             }
             .locat{
+                padding-top: 8px;
                 p{
                     width: auto;
                 }
@@ -290,6 +296,24 @@ $gray: #7f7f7f;
                     border: 1px solid $gray;
                     color: $green;
                     background-color: $black;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:430px){
+    .tic_collect{
+        li{
+            .time{
+                height: 160px;
+                justify-content: space-around;
+                font-size: 22px;
+            }
+            .tic_name{
+                height: 160px;
+                .locat{
+                    position: relative;
                 }
             }
         }
