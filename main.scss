@@ -5,6 +5,7 @@ $white:#fff;
 $black:#231815;
 $green:#83ff00;
 $gray:#7f7f7f;
+$dark-gray:#292423;
 
 *{
     margin: 0;
@@ -28,6 +29,10 @@ body{
     font-style: normal;
     height: auto;
 }
+::selection {
+    color: $dark-gray;
+    background-color: $green;
+  }
 #toggleSidebar{
     display: none;
 }
@@ -794,7 +799,7 @@ input[type="radio"]{
         margin: 15px 17px;
     }
     .content{
-        padding: 20px 40px;
+        padding: 20px 16px;
         h3{
             width: 320px;
             padding: 0;

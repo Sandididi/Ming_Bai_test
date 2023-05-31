@@ -25,6 +25,16 @@ body {
   height: auto;
 }
 
+::-moz-selection {
+  color: #292423;
+  background-color: #83ff00;
+}
+
+::selection {
+  color: #292423;
+  background-color: #83ff00;
+}
+
 #toggleSidebar {
   display: none;
 }
@@ -743,7 +753,7 @@ input[type=radio] {
     margin: 15px 17px;
   }
   .content {
-    padding: 20px 40px;
+    padding: 20px 16px;
   }
   .content h3 {
     width: 320px;
