@@ -34,18 +34,20 @@ $gray: #7f7f7f;
 }
 .content{
     h3{
-        span{
-            display: block;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1;
-        }
-        margin-top: 32px;
-        margin-bottom: 8px;
         font-size: 36px;
         font-weight: 700;
         letter-spacing: 0px;
         padding: 0px 16px;
+        margin: 0;
+    }
+    .set_name{
+        margin-top: 32px;
+        padding: 0px 16px;
+        text-align: left;
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
     }
 }
 .program{
@@ -73,14 +75,21 @@ $gray: #7f7f7f;
         font-weight: 400;
     }
     .detail{
-        font-size: 18px;
         margin-top: 16px;
+        p{
+            padding: 0px 20px;
+            font-size: 18px;
+        }
     }
     .credits{
         font-size: 20px;
         line-height: 2;
         font-weight: 600;
         padding: 0px 20px;
+        margin-bottom: 16px;
+        p{
+            padding: 0;
+        }
     }
 }
 .programImg{
@@ -104,7 +113,7 @@ $gray: #7f7f7f;
     }
     p{
         text-align: left;
-        padding: 8px 20px;
+        padding: 0px 20px;
         font-weight: 500;
         font-size: 22px;
         line-height: 1.8;
@@ -227,14 +236,15 @@ $gray: #7f7f7f;
 @media(max-width:720px){//行動版
     .content{
         .program{
+            .set_name{
+                line-height: 1.5;
+                padding: 0px 20px;
+            }
             h3{
-                span{
-                    line-height: 1.5;
-                }
                 width: auto;
                 height: auto;
                 padding: 8px 20px;
-                margin: 32px 0px 8px 0px;
+                margin: 0px 0px 8px 0px;
                 line-height: 1.2;
             }
         }
