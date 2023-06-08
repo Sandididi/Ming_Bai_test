@@ -27,6 +27,7 @@
 }
 
 .content h3 {
+  line-height: 1.4;
   font-size: 36px;
   font-weight: 700;
   letter-spacing: 0px;
@@ -62,7 +63,7 @@
   text-align: left;
   margin-top: 16px;
   padding: 8px 20px;
-  font-size: 24px;
+  font-size: 26px;
   font-family: "Din Kursivschrift Breit", sans-serif;
 }
 .programText .intro {
@@ -77,14 +78,12 @@
   font-size: 18px;
 }
 .programText .credits {
-  font-size: 20px;
-  line-height: 2;
-  font-weight: 600;
   padding: 0px 20px;
   margin-bottom: 16px;
 }
 .programText .credits p {
   padding: 0;
+  font-weight: 600;
 }
 
 .programImg {
