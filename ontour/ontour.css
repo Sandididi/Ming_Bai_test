@@ -1,0 +1,120 @@
+body {
+  height: auto;
+}
+
+.banner .imgs {
+  background-image: url(../img/banner_ontour.jpg);
+  animation: none;
+}
+
+.content .performances {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.content .items {
+  margin: 20px 10px 80px 10px;
+  width: 300px;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.content .items a {
+  color: #231815;
+  text-decoration: none;
+}
+.content .items .itemImg {
+  width: 300px;
+  height: 200px;
+  transition: 0.3s all;
+  background-image: url(../img/showitem_02.jpg);
+  background-size: 300px 225px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .items .perfor_Name {
+  flex: 2;
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: justify;
+  padding: 2px 4px;
+}
+.content .items .date {
+  flex: 1;
+}
+.content .items:hover {
+  background-color: #eee;
+}
+.content .items:hover .itemImg {
+  background-size: 320px 240px;
+}
+.content .items:nth-child(1) .itemImg {
+  background-image: url(../img/showitem_01.jpg);
+}
+.content .items:nth-child(2) .itemImg {
+  background-image: url(../img/showitem_02.jpg);
+}
+.content .items:nth-child(3) .itemImg {
+  background-image: url(../img/showitem_03.jpg);
+}
+.content .items:nth-child(4) .itemImg {
+  background-image: url(../img/showitem_04.jpg);
+}
+.content .date {
+  text-align: left;
+  font-size: 22px;
+  padding: 2px 4px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.lang-test {
+  position: relative;
+  display: block;
+}
+.lang-test .lang {
+  width: 100%;
+}
+
+@media (max-width: 1140px) {
+  .content .items {
+    margin: 20px 20px 80px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .content .performances {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .content .items {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .content .items a {
+    width: 100%;
+  }
+  .content .items .itemImg {
+    min-width: 320px;
+    height: 300px;
+    background-size: cover;
+  }
+  .content .items .innerinfo {
+    position: absolute;
+    width: 312px;
+    bottom: 0;
+    transition: 0.3s;
+    padding: 8px 4px;
+    background-color: rgba(35, 24, 21, 0.8);
+    transform: translateY(0%);
+    color: #fff;
+  }
+  .content .items:hover .itemImg {
+    background-size: cover;
+  }
+  .content .items:hover .innerinfo {
+    color: #83ff00;
+  }
+}/*# sourceMappingURL=ontour.css.map */

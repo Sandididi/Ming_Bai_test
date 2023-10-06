@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.png" />
+    <link rel="bookmark" href="../../favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../ontourshow.css">
+    <title>MingBai.Lab</title>
+</head>
+
+<body>
+    <header>
+        <div class="navClass">
+            <div class="webLogo">
+                <a href="https://mingbailab.art/">
+                    <img src="../../img/fontlogo.svg" alt="" srcset="">
+                </a>
+            </div>
+            <input type="checkbox" class="toggleSidebar" id="toggleSidebar" checked="checked">
+            <label for="toggleSidebar" class="toggleIcon">
+                <div class="Mline1"></div>
+                <div class="Mline2"></div>
+                <div class="Mline3"></div>
+            </label>
+            <div class="navList">
+                <ul class="listitem">
+                    <li class="artists">About
+                        <ul>
+                            <li><a href="https://mingbailab.art/">&ensp;Ming Baï Lab</a></li>
+                            <li>&ensp;Ming Chieh Lee</li>
+                            <li>&ensp;Baï Lee</li>
+                        </ul>
+                    </li>
+                    <li>Calendar</li>
+                    <li class="lg_ontour"><a href="https://www.mingbailab.art/ontour/">OnTour</a></li>
+                    <li>Projects</li>
+                    <li>Works</li>
+                    <!-- <li>Shop</li> -->
+                    <li>Contact</li>
+                </ul>
+                <ul class="onTitem md_ontour">
+                    <li><a href="https://www.mingbailab.art/ontour/">OnTour</a></li>
+                    <div class="slider">
+                        <div class="slides">
+                            <input type="radio" name="radio-btn" id="numBtn1" checked="checked" />
+                            <input type="radio" name="radio-btn" id="numBtn2" />
+                            <input type="radio" name="radio-btn" id="numBtn3" />
+                            <input type="radio" name="radio-btn" id="numBtn4" />
+
+                            <div class="carousel-manual">
+                                <label for="numBtn1" class="manual-btn" id="numBtn1">1</label>
+                                <label for="numBtn2" class="manual-btn" id="numBtn2">2</label>
+                                <label for="numBtn3" class="manual-btn" id="numBtn3">3</label>
+                                <label for="numBtn4" class="manual-btn" id="numBtn4">4</label>
+                            </div>
+                            <div class="tour-carousel-group">
+                                <div class="textWhite">
+                                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                                        <div class="carousel-text">
+                                            <div class="show">
+                                                <div class="date lang" key="showdate1">2023.AUG.19</div>
+                                                <div class="program lang" key="show1">淼淼之路―溺水《轉，看看有沒有什麼好地方》</div>
+                                            </div>
+                                            <img src="../../img/arrow_1.png" alt="">
+                                        </div>
+                                    </a>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                                        <div class="carousel-text">
+                                            <div class="show">
+                                                <div class="date lang" key="showdate2">2023.AUG.25｜2023.AUG.27</div>
+                                                <div class="program lang" key="show2">淼淼之路―海水《沿著邊緣塗抹記號》身體郊遊版</div>
+                                            </div>
+                                            <img src="../../img/arrow_1.png" alt="">
+                                        </div>
+                                    </a>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                                        <div class="carousel-text">
+                                            <div class="show">
+                                                <div class="date lang" key="showdate3">2023.AUG.25｜2023.AUG.27</div>
+                                                <div class="program lang" key="show3">淼淼之路―水水《轉，這不是一片海灘》</div>
+                                            </div>
+                                            <img src="../../img/arrow_1.png" alt="">
+                                        </div>
+                                    </a>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                                        <div class="carousel-text">
+                                            <div class="show">
+                                                <div class="date lang" key="showdate4">2023.SEP.01｜2023.SEP.02</div>
+                                                <div class="program lang" key="show4">淼淼之路―井水《烏腳之謎》</div>
+                                            </div>
+                                            <img src="../../img/arrow_1.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tour-carousel-group">
+                                <div class="textGray">
+                                    <div class="carousel-text ">
+                                        <div class="show">
+                                            <div class="date lang" key="showdate1">2023.AUG.19</div>
+                                            <div class="program lang" key="show1">淼淼之路―溺水《轉，看看有沒有什麼好地方》</div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-text ">
+                                        <div class="show">
+                                            <div class="date lang" key="showdate2">2023.AUG.25｜2023.AUG.27</div>
+                                            <div class="program lang" key="show2">淼淼之路―海水《沿著邊緣塗抹記號》身體郊遊版</div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-text ">
+                                        <div class="show">
+                                            <div class="date lang" key="showdate3">2023.AUG.25｜2023.AUG.27</div>
+                                            <div class="program lang" key="show3">淼淼之路―水水《轉，這不是一片海灘》</div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-text ">
+                                        <div class="show">
+                                            <div class="date lang" key="showdate4">2023.SEP.01｜2023.SEP.02</div>
+                                            <div class="program lang" key="show4">淼淼之路―井水《烏腳之謎》</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </ul>
+                <div id="navId">
+                    <nav class="language">
+                        <a href="#zh-tw">
+                            <li class="translate lang" id="zh-tw" key="langBtnTw">中</li>
+                        </a>|
+                        <a href="#en">
+                            <li class="translate lang" id="en-gb" key="langBtnEn">EN</li>
+                        </a>|
+                        <a href="#fr">
+                            <li class="translate lang" id="fr" key="langBtnFr">FR</li>
+                        </a>
+                    </nav>
+                </div>
+                <div class="logo">
+                    <img src="../../img/logo.svg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="logo">
+        <img src="../../img/logo.svg" alt="" srcset="">
+    </div>
+
+    <div class="banner">
+        <div class="imgs">
+        </div>
+        <div class="banner_nav_btn">
+            <ul>
+                <li class="artists">About
+                    <ul>
+                        <li>&ensp;Ming Baï Lab</li>
+                        <li>&ensp;Ming Chieh Lee</li>
+                        <li>&ensp;Baï Lee</li>
+                    </ul>
+                </li>
+                <li>Calendar</li>
+                <li><a href="https://www.mingbailab.art/ontour/">OnTour</a></li>
+                <li>Projects</li>
+                <li>Works</li>
+                <!-- <li>Shop</li> -->
+                <li>Contact</li>
+            </ul>
+            <ul class="socialMedia">
+                <a href="http://" target="_blank" rel="noopener noreferrer"><svg id="layerA"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                        <path class="socialMediaColor"
+                            d="m19.46,3.69c-.11,0-.22.02-.32.02-.98,0-1.96,0-2.94,0-.06,0-.12-.01-.18-.02,1.15,0,2.3,0,3.45,0Z" />
+                        <path class="socialMediaColor"
+                            d="m16.25,11.14h3.47c-.07.71-.13,1.41-.2,2.11-.04.46-.08.93-.11,1.39-.02.27-.02.28-.3.29-.91,0-1.81,0-2.72,0-.05,0-.09,0-.16,0,0,.05,0,.1,0,.15,0,1.19,0,2.38,0,3.58,0,2.45-.02,4.89-.04,7.34,0,.32,0,.32-.32.32-1.36,0-2.72,0-4.08,0-.04,0-.08,0-.13,0,0-.05,0-.08,0-.12,0-3.2,0-6.4-.01-9.61,0-.5,0-1,0-1.5,0-.08-.04-.08-.1-.08-.31,0-.62,0-.93,0-.41,0-.81,0-1.22,0-.1,0-.13-.03-.13-.13,0-1.21,0-2.43,0-3.64,0-.1.04-.12.12-.12.74,0,1.48,0,2.24,0,0-.03.01-.07.01-.11,0-1.12,0-2.24.03-3.36.03-.91.28-1.76.88-2.48.52-.63,1.2-1,1.99-1.18.42-.09.85-.18,1.27-.21.61-.04,1.23-.02,1.85-.02.63,0,1.26,0,1.89-.01.13,0,.16.04.16.15,0,1.02.01,2.04.02,3.06,0,.21,0,.41.01.62,0,.1-.04.12-.13.12-.86,0-1.71,0-2.57.02-.08,0-.16,0-.24.03-.24.05-.42.17-.47.43-.04.23-.08.47-.09.71-.01.73,0,1.45,0,2.18,0,.02,0,.03.01.07Z" />
+                    </svg></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><svg id="layerA"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                        <path class="socialMediaColor"
+                            d="m18.55,15c0,1.96-1.59,3.55-3.55,3.55s-3.55-1.59-3.55-3.55,1.59-3.55,3.55-3.55c1.96,0,3.55,1.59,3.55,3.55Zm7.55-4.88v9.76c0,3.43-2.78,6.21-6.21,6.21h-9.76c-3.43,0-6.21-2.78-6.21-6.21v-9.76c0-3.43,2.78-6.21,6.21-6.21h9.76c3.43,0,6.21,2.78,6.21,6.21Zm-5.77,4.88c0-2.94-2.38-5.33-5.33-5.33s-5.33,2.38-5.33,5.33,2.38,5.33,5.33,5.33c2.94,0,5.32-2.39,5.33-5.33Zm1.78-5.77c0-.74-.6-1.33-1.33-1.33s-1.33.6-1.33,1.33.6,1.33,1.33,1.33,1.33-.6,1.33-1.33Z" />
+                    </svg></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><svg id="layerA"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">\
+                        <path class="socialMediaColor"
+                            d="m25.52,9.89c-.1,2.14-1.6,5.07-4.5,8.8-3,3.89-5.54,5.83-7.61,5.83-1.28,0-2.37-1.19-3.26-3.56l-1.78-6.52c-.66-2.37-1.37-3.56-2.13-3.56-.16,0-.74.35-1.73,1.04l-1.04-1.33c1.08-.95,2.15-1.9,3.21-2.87,1.45-1.25,2.54-1.91,3.26-1.98,1.71-.16,2.77,1,3.16,3.51.43,2.7.73,4.38.89,5.04.49,2.24,1.04,3.36,1.63,3.36.46,0,1.15-.73,2.08-2.17.92-1.45,1.42-2.55,1.48-3.31.13-1.25-.36-1.88-1.48-1.88-.53,0-1.07.12-1.63.35,1.09-3.53,3.16-5.24,6.23-5.14,2.27.07,3.34,1.53,3.21,4.4h0Z" />
+                    </svg></a>
+            </ul>
+        </div>
+        <div class="banner_lang_btn">
+            <ul class="language">
+                <a href="#zh-tw">
+                    <li class="translate lang" id="zh-tw" key="langBtnTw">中</li>
+                </a>|
+                <a href="#en">
+                    <li class="translate lang" id="en-gb" key="langBtnEn">EN</li>
+                </a>|
+                <a href="#fr">
+                    <li class="translate lang" id="fr" key="langBtnFr">FR</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="breadcrumb"><a class="top_page" href="https://www.mingbailab.art/ontour/">ontour</a>
+            <div class="now_page lang" key="show2">淼淼之路 ― 海水《沿著邊緣塗抹記號》身體郊遊版</div>
+        </div>
+        <div class="program">
+            <div class="programText">
+                <span class="set_name lang" key="otw">淼淼之路</span>
+                <h3 class="lang" key="showName">海水《沿著邊緣塗抹記號》身體郊遊版</h3>
+                <p class="intro lang" key="intro">
+                    ＃海水－這是一趟跨海的列車之旅，跨過後疫情下的身體迷失。Baï LEE以曾任巴黎記者、街拍攝影師、國師旅遊節目企劃，旅法六年各種斜槓為了做創作的荒繆人生，帶明潔到巴黎舊地重遊，兩人透過聲音與身體姿態記錄、呈現藝術幻象與現實衝突所交疊出的「流動饗宴」。
+                </p>
+                <div class="detail">
+                    <p class="lang" key="detail1">演出時間：8/25 (Fri) 15:30、8/27 (Sun) 15:30</p>
+                    <p class="lang" key="detail2">新北投車站（臺北市北投區七星街1號）</p>
+                    <p class="lang" key="detail3">演出長度：40分鐘</p>
+                    <p class="lang" key="detail4">＊此為移動式演出，觀眾請自行攜帶耳機連接語音導覽裝置。</p>
+                </div>
+                <h5>Credits</h5>
+                <div class="credits">
+                    <p class="lang" key="credit1">策展/製作：明白實驗所</p>
+                    <p class="lang" key="credit2">概念/文本/演出：李明潔、李欣穎Baï LEE</p>
+                    <p class="lang" key="credit3">視覺設計：李欣穎Baï LEE</p>
+                    <p class="lang" key="credit4">聲音設計：陳臨霜</p>
+                </div>
+            </div>
+            <div class="programImg">
+                <img src="../../img/showitem_02.jpg" alt="" srcset="">
+            </div>
+        </div>
+        <div class="season">
+            <div class="seasonintro">
+                <h5 class="lang" key="otw">淼淼之路</h5>
+                <p class="lang" key="otw-intro1">
+                    人生就像游泳，創作也是，有時大口呼吸、有時從容感受、有時喘不過去，唯一不變的是－好好換氣、保持前進。
+                </p>
+                <p class="lang" key="otw-intro2">2023台北藝穗節《明白實驗所》自主策展兼展演呈現四檔有關水的故事。</p>
+                <div class="img">
+                    <img src="../../img/banner_ontour.jpg" alt="">
+                </div>
+                <p class="lang" key="notice">* 限量明白實驗所策展《淼淼之路》四場節目套票1999元，一起陪我們久久久。</p>
+            </div>
+            <ul class="tic_collect">
+                <li>
+                    <div class="time">
+                        <p>2023.AUG</p>
+                        <p><span>Sat19</span></p>
+                        <p>14:00 | 18:00</p>
+                    </div>
+                    <div class="tic_name">
+                        <div class="tic_title lang" key="show1">淼淼之路 ― 溺水《轉，看看有沒有什麼好地方》</div>
+                        <div class="locat">
+                            <svg version="1.1" x="0px" y="0px" viewBox="0 0 448 448"
+                                style="enable-background:new 0 0 448 448;" xml:space="preserve">
+                                <path class="st0" d="M429.6,60.1c4.9-11.9,2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352,144c-14.2,5.8-22.2,20.8-19.3,35.8
+	S32.7,224,48,224h176v176c0,15.3,10.8,28.4,25.8,31.4c15,3,30-5.1,35.8-19.3C285.6,412.1,429.6,60.1,429.6,60.1z" />
+                            </svg>
+                            <p class="lang" key="address1">鬧房間（臺北市中正區延平南路58號4樓）</p>
+                        </div>
+                    </div>
+                    <div class="tic_btn">
+                        <img src="../../img/ticket.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2023.AUG<span>Fri25</span>15:30</div>
+                    <div class="tic_name">
+                        <div class="tic_title lang" key="show2">淼淼之路 ― 海水《沿著邊緣塗抹記號》身體郊遊版</div>
+                        <div class="locat">
+                            <div><svg version="1.1" x="0px" y="0px" viewBox="0 0 448 448"
+                                style="enable-background:new 0 0 448 448;" xml:space="preserve">
+                                <path class="st0" d="M429.6,60.1c4.9-11.9,2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352,144c-14.2,5.8-22.2,20.8-19.3,35.8
+	S32.7,224,48,224h176v176c0,15.3,10.8,28.4,25.8,31.4c15,3,30-5.1,35.8-19.3C285.6,412.1,429.6,60.1,429.6,60.1z" />
+                            </svg></div>
+                            <p class="lang" key="address2">新北投車站（臺北市北投區七星街1號）</p>
+                        </div>
+                    </div>
+                    <div class="tic_btn">
+                        <img src="../../img/ticket.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2023.AUG<span>Fri25</span>20:00</div>
+                    <div class="tic_name">
+                        <div class="tic_title lang" key="show3">淼淼之路 ― 水水《轉，這不是一片海灘》</div>
+                        <div class="locat">
+                            <div><svg version="1.1" x="0px" y="0px" viewBox="0 0 448 448"
+                                style="enable-background:new 0 0 448 448;" xml:space="preserve">
+                                <path class="st0" d="M429.6,60.1c4.9-11.9,2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352,144c-14.2,5.8-22.2,20.8-19.3,35.8
+	S32.7,224,48,224h176v176c0,15.3,10.8,28.4,25.8,31.4c15,3,30-5.1,35.8-19.3C285.6,412.1,429.6,60.1,429.6,60.1z" />
+                            </svg></div>
+                            <p class="lang" key="address2">新北投車站（臺北市北投區七星街1號）</p>
+                        </div>
+                    </div>
+                    <div class="tic_btn">
+                        <img src="../../img/ticket.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2023.AUG<span>Sun27</span>15:30</div>
+                    <div class="tic_name">
+                        <div class="tic_title lang" key="show2">淼淼之路 ― 海水《沿著邊緣塗抹記號》身體郊遊版</div>
+                        <div class="locat">
+                            <div><svg version="1.1" x="0px" y="0px" viewBox="0 0 448 448"
+                                style="enable-background:new 0 0 448 448;" xml:space="preserve">
+                                <path class="st0" d="M429.6,60.1c4.9-11.9,2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352,144c-14.2,5.8-22.2,20.8-19.3,35.8
+	S32.7,224,48,224h176v176c0,15.3,10.8,28.4,25.8,31.4c15,3,30-5.1,35.8-19.3C285.6,412.1,429.6,60.1,429.6,60.1z" />
+                            </svg></div>
+                            <p class="lang" key="address2">新北投車站（臺北市北投區七星街1號）</p>
+                        </div>
+                    </div>
+                    <div class="tic_btn">
+                        <img src="../../img/ticket.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2023.AUG<span>Sun27</span>20:00</div>
+                    <div class="tic_name">
+                        <div class="tic_title lang" key="show3">淼淼之路 ― 水水《轉，這不是一片海灘》</div>
+                        <div class="locat">
+                            <div><svg version="1.1" x="0px" y="0px" viewBox="0 0 448 448"
+                                style="enable-background:new 0 0 448 448;" xml:space="preserve">
+                                <path class="st0" d="M429.6,60.1c4.9-11.9,2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352,144c-14.2,5.8-22.2,20.8-19.3,35.8
+	S32.7,224,48,224h176v176c0,15.3,10.8,28.4,25.8,31.4c15,3,30-5.1,35.8-19.3C285.6,412.1,429.6,60.1,429.6,60.1z" />
+                            </svg></div>
+                            
+                            <p class="lang" key="address2">新北投車站（臺北市北投區七星街1號）</p>
+                        </div>
+                    </div>
+                    <div class="tic_btn">
+                        <img src="../../img/ticket.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2023.SEP<span>Fri 1</span>14:30 | 18:00</div>
+                    <div class="tic_name">
+                        <div class="tic_title lang" key="show4">淼淼之路 ― 井水《烏腳之謎》講述表演 </div>
+                        <div class="locat">
+                            <div><svg version="1.1" x="0px" y="0px" viewBox="0 0 448 448"
+                                style="enable-background:new 0 0 448 448;" xml:space="preserve">
+                                <path class="st0" d="M429.6,60.1c4.9-11.9,2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352,144c-14.2,5.8-22.2,20.8-19.3,35.8
+	S32.7,224,48,224h176v176c0,15.3,10.8,28.4,25.8,31.4c15,3,30-5.1,35.8-19.3C285.6,412.1,429.6,60.1,429.6,60.1z" />
+                            </svg></div>
+                            <p class="lang" key="address3">紀州庵文學森林-古蹟「大廣間」( 臺北市中正區同安街 107 號)</p>
+                        </div>
+                    </div>
+                    <div class="tic_btn">
+                        <img src="../../img/ticket.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2023.SEP<span>Sat 2</span>14:00</div>
+                    <div class="tic_name">
+                        <div class="tic_title lang" key="show4">淼淼之路 ― 井水《烏腳之謎》講述表演 </div>
+                        <div class="locat">
+                            <div><svg version="1.1" x="0px" y="0px" viewBox="0 0 448 448"
+                                style="enable-background:new 0 0 448 448;" xml:space="preserve">
+                                <path class="st0" d="M429.6,60.1c4.9-11.9,2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352,144c-14.2,5.8-22.2,20.8-19.3,35.8
+	S32.7,224,48,224h176v176c0,15.3,10.8,28.4,25.8,31.4c15,3,30-5.1,35.8-19.3C285.6,412.1,429.6,60.1,429.6,60.1z" />
+                            </svg></div>
+                            <p class="lang" key="address3">紀州庵文學森林-古蹟「大廣間」( 臺北市中正區同安街 107 號)</p>
+                        </div>
+                    </div>
+                    <div class="tic_btn">
+                        <img src="../../img/ticket.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <ul class="socialMedia">
+                <li><a href=""><img src="../../img/socialmedia_fb.png" alt=""></a></li>
+                <li><a href=""><img src="../../img/socialmedia_ig.png" alt=""></a></li>
+                <li><a href=""><img src="../../img/socialmedia_vimeo.png" alt=""></a></li>
+            </ul>
+            <p>Copyright &copy; 2023 MingBaiLab. All rights reserved.</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        var dataReload = document.querySelectorAll("[data-reload]");
+        var arrLang = {
+            "zh-tw": {
+                "langBtnTw": "中",
+                "langBtnEn": "EN",
+                "langBtnFr": "FR",
+                "otw" : "淼淼之路",
+                "showName" : "海水《沿著邊緣塗抹記號》身體郊遊版",
+                "show1": "淼淼之路 ― 溺水《轉，看看有沒有什麼好地方》",
+                "show2": "淼淼之路 ― 海水《沿著邊緣塗抹記號》身體郊遊版",
+                "show3": "淼淼之路 ― 水水《轉，這不是一片海灘》",
+                "show4": "淼淼之路 ― 井水《烏腳之謎》講述表演",
+                "showdate1": "2023.AUG.19",
+                "showdate2": "2023.AUG.25｜2023.AUG.27",
+                "showdate3": "2023.AUG.25｜2023.AUG.27",
+                "showdate4": "2023.SEP.01｜2023.SEP.02",
+                "intro":"＃海水－這是一趟跨海的列車之旅，跨過後疫情下的身體迷失。Baï LEE以曾任巴黎記者、街拍攝影師、國師旅遊節目企劃，旅法六年各種斜槓為了做創作的荒繆人生，帶明潔到巴黎舊地重遊，兩人透過聲音與身體姿態記錄、呈現藝術幻象與現實衝突所交疊出的「流動饗宴」。",
+                "detail1":"演出時間：8/25 (Fri) 15:30、8/27 (Sun) 15:30",
+                "detail2":"演出地點：新北投車站（臺北市北投區七星街1號）",
+                "detail3":"演出長度：40分鐘",
+                "detail4":"＊此為移動式演出，觀眾請自行攜帶耳機連接語音導覽裝置。",
+                "credit1":"策展/製作：明白實驗所",
+                "credit2":"概念/文本/演出：李明潔、李欣穎Baï LEE",
+                "credit3":"視覺設計：李欣穎Baï LEE",
+                "credit4":"聲音設計：陳臨霜",
+                "address1":"鬧房間（臺北市中正區延平南路58號4樓）",
+                "address2":"新北投車站（臺北市北投區七星街1號）",
+                "address3":"紀州庵文學森林-古蹟「大廣間」( 臺北市中正區同安街 107 號)",
+                "otw-intro1":"人生就像游泳，創作也是，有時大口呼吸、有時從容感受、有時喘不過去，唯一不變的是－好好換氣、保持前進。",
+                "otw-intro2":'2023台北藝穗節《明白實驗所》自主策展兼展演呈現四檔有關水的故事。',
+                "notice":"* 限量明白實驗所策展《淼淼之路》四場節目套票1999元，一起陪我們久久久。",
+            },
+            "en-gb": {
+                "langBtnTw": "中",
+                "langBtnEn": "EN",
+                "langBtnFr": "FR",
+                "otw" : "Over the Troubled Waters",
+                "showName" : "Marking along the Edge",
+                "show1": "Hey!! Let’s Go Housekeeping !!",
+                "show2": "Marking along the Edge",
+                "show3": "Ceci n'est pas une plage",
+                "show4": "The Mystery of Blackfoot Disease",
+                "showdate1": "19.AUG.2023",
+                "showdate2": "25.AUG.2023｜27.AUG.2023",
+                "showdate3": "25.AUG.2023｜27.AUG.2023",
+                "showdate4": "01.SEP.2023｜02.SEP.2023",
+                "intro":'#Overseas - This is a journey on the train overseas, and the body got lost under the post-epidemic.  Bai LEE used to be a journalist, a street photographer, and astrologer Jesse Tang’s travel program planner in Paris, she had lived in France for six years, in order to make art, she lived as “slashes” in her ridiculous life. This year she took Mingchieh to revisit Paris, they recorded the local sounds and reproduced the performance with live body gestures.  While thinking of Hemingway’s “ A Moveable Feast ”, Paris for them is overlapping the conflict between artistic illusion and reality.',
+                "detail1":"Show Time：8/25 (Fri) 15:30、8/27 (Sun) 15:30",
+                "detail2":"Address：XinBeiTou Historic Station",
+                "detail3":"Duration：40mins",
+                "detail4":"* The audience must bring their own headphones to connect our audio tour guide.",
+                "credit1":"Curation/Production: Ming Baï Lab",
+                "credit2":"Concept/Text/Perfomers: Ming-Chieh LEE, Baï LEE",
+                "credit3":"Visual Design: Baï LEE",
+                "credit4":"Sound Design:Lin-Shuang CHEN",
+                "address1":"NOW room（4F, No.58, Yanping S. Rd., Zhongzheng Dist., Taipei City）",
+                "address2":"XinBeiTou Historic Station（No.1, Qixing St., Beitou Dist., Taipei City）",
+                "address3":"Kishu An Forest of Literature(No.107, Tong'an St., Zhongzheng Dist., Taipei City)",
+                "otw-intro1":"If we take making art as practicing swimming in life, sometimes you take a deep breath, sometimes you feel calm, and sometimes you need a minute to draw breath.",
+                "otw-intro2":'What we need to keep in mind is - breathe well and keep going.  Ming Baï Lab collated their experiments from the past, this year in Taipei Fringe Festival independently curated "Over the Troubled Waters”.  They are going to present four stories related to water, connecting with some moments in life and keep moving forward.',
+                "notice":'* The four-session package of " Over the Troubled Waters " curated by Ming Baï Lab costs $1,999.',
+            },
+            "fr": {
+                "langBtnTw": "中",
+                "langBtnEn": "EN",
+                "langBtnFr": "FR",
+                "otw" : "Over the Troubled Waters",
+                "showName" : "Marking along the Edge",
+                "show1": "Hey!! Let’s Go Housekeeping !!",
+                "show2": "Marking along the Edge",
+                "show3": "Ceci n'est pas une plage",
+                "show4": "The Mystery of Blackfoot Disease",
+                "showdate1": "19.AUG.2023",
+                "showdate2": "25.AUG.2023｜27.AUG.2023",
+                "showdate3": "25.AUG.2023｜27.AUG.2023",
+                "showdate4": "01.SEP.2023｜02.SEP.2023",
+                "intro":'#Overseas - This is a journey on the train overseas, and the body got lost under the post-epidemic.  Bai LEE used to be a journalist, a street photographer, and astrologer Jesse Tang’s travel program planner in Paris, she had lived in France for six years, in order to make art, she lived as “slashes” in her ridiculous life. This year she took Mingchieh to revisit Paris, they recorded the local sounds and reproduced the performance with live body gestures.  While thinking of Hemingway’s “ A Moveable Feast ”, Paris for them is overlapping the conflict between artistic illusion and reality.',
+                "detail1":"Show Time：8/25 (Fri) 15:30、8/27 (Sun) 15:30",
+                "detail2":"Address：XinBeiTou Historic Station",
+                "detail3":"Durée：40mins",
+                "detail4":"* The audience must bring their own headphones to connect our audio tour guide.",
+                "credit1":"Curation/Production: Ming Baï Lab",
+                "credit2":"Concept/Text/Perfomers: Ming-Chieh LEE, Baï LEE",
+                "credit3":"Visual Design: Baï LEE",
+                "credit4":"Sound Design:Lin-Shuang CHEN",
+                "address1":"NOW room（4F, No.58, Yanping S. Rd., Zhongzheng Dist., Taipei City）",
+                "address2":"XinBeiTou Historic Station（No.1, Qixing St., Beitou Dist., Taipei City）",
+                "address3":"Kishu An Forest of Literature(No.107, Tong'an St., Zhongzheng Dist., Taipei City)",
+                "otw-intro1":"If we take making art as practicing swimming in life, sometimes you take a deep breath, sometimes you feel calm, and sometimes you need a minute to draw breath.",
+                "otw-intro2":'What we need to keep in mind is - breathe well and keep going.  Ming Baï Lab collated their experiments from the past, this year in Taipei Fringe Festival independently curated "Over the Troubled Waters”.  They are going to present four stories related to water, connecting with some moments in life and keep moving forward.',
+                "notice":'* The four-session package of " Over the Troubled Waters " curated by Ming Baï Lab costs $1,999.',
+            }
+        };
+        $(document).ready(function () {
+            //lang
+            var lang = 'zh-tw';
+            $(".lang").each(function (index, element) {
+                $(this).text(arrLang[lang][$(this).attr("key")]);
+            });
+
+            var counter = 1;
+            setInterval(function () {
+                document.getElementById('numBtn' + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1;
+                }
+            }, 5000);
+        });
+        $(".translate").click(function () {
+            var lang = $(this).attr("id");
+
+            $(".lang").each(function (index, element) {
+                $(this).text(arrLang[lang][$(this).attr("key")]);
+            });
+        });
+        $("#zh-tw").click(function () {
+            $(".program").css("font-size", "18px");
+            $("p").css("line-height","1.8");
+        });
+        $("#en-gb").click(function () {
+            $(".program").css("font-size", "22px");
+            $("p").css("line-height","1.2");
+        });
+        $("#fr").click(function () {
+            $(".program").css("font-size", "22px");
+            $("p").css("line-height","1.2");
+        });
+
+        //
+        //navList
+        //$(".artists").children('ul').hide();
+        $(".artists").click(function () {
+            $(this).toggleClass("artOpen", 1000);
+        });
+
+
+
+        //smalldevice
+        $(window).resize(function () {
+            var smalldevice = $(window).height();
+            if (smalldevice < 730) {
+                $(".textGray").hide(300);
+                $("#logo").hide(300);
+            } else {
+                $(".textGray").show(300);
+                $("#logo").show(300);
+            }
+        });
+    </script>
+</body>
+
+</html>
