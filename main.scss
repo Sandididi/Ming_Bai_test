@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap');
-@import url("https://use.typekit.net/cfw8pqb.css");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
 
 $white:#fff;
 $black:#231815;
@@ -13,22 +13,21 @@ $dark-gray:#292423;
     font-weight: 300;
     position: relative;
 }
-@font-face {
-    font-family: 'DINcondensed_Bold';
-    src: url('font/DINCondensed-Bold.woff') format('woff');
-}
-@font-face {
-    font-family: 'Din Kursivschrift Breit';
-    font-style: normal;
-    font-weight: normal;
-    src: url('font/DinKursivschriftBreit.woff') format('woff');
-    }
+
 body{
-    font-family: 'din-condensed','Noto Serif TC', sans-serif;
+    font-family: 'Oswald','Noto Serif TC', sans-serif;
     font-weight: 300;
     font-style: normal;
     height: auto;
 }
+
+///
+.space{
+    height: 60vh;
+}
+/// 
+
+
 ::selection {
     color: $dark-gray;
     background-color: $green;
@@ -44,7 +43,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px $black solid;
+    border-bottom: 1px #c7c7c7 solid;
     background-color: #fff;
     z-index: 2;
     .webLogo{
@@ -72,11 +71,11 @@ body{
         display: flex;
     }
     li{
-        font-family: 'DINcondensed_Bold', 'Noto Serif TC', sans-serif;
         list-style: none;
         margin: 0px 20px 0px 0px;
         padding: 0px 5px 5px 5px;
-        font-size: 28px;
+        font-weight: 400;
+        font-size: 24px;
         cursor: pointer;
         &::after{
             content: '';
@@ -94,6 +93,7 @@ body{
             width: 80%;
         }
         a{
+            font-weight: 400;
             text-decoration: none;
             color: $black;
         }
@@ -103,17 +103,16 @@ body{
         li{
             padding: 0px 16px;
         }
-        .artists{
-            width: 80px;
+        .artists , .works{
             transition: all 0.3s;
             &::before{
                 content: "✖";
                 position: absolute;
-                font-size: 20px;
+                font-size: 16px;
                 top: 0%;
-                right: 0%;
+                right: -25%;
                 display: inline-block;
-                transform: translate(-50%,0%) rotate(45deg);
+                transform: translate(-150%,0%) rotate(45deg);
                 transition: all 0.3s;
             }
             &:hover{
@@ -123,8 +122,8 @@ body{
             }
             ul{
                 position: absolute;
-                top: 45px;
-                left: 0;
+                top: 48px;
+                left: 0%;
                 display: flex;
                 flex-direction: column;
                 height: 0px;
@@ -135,8 +134,8 @@ body{
                     border-right: $gray 1px solid;
                     border-left: $gray 1px solid;
                     border-bottom: $gray 1px solid;
-                    width: 180px;
-                    padding: 8px 16px;
+                    width: 140px;
+                    padding: 0px 16px 4px;
                     background-color: $white;
                     transition: 0.3s;
                     &::before{
@@ -152,6 +151,7 @@ body{
                     }
                 }
                 a{
+                    font-size: 20px;
                     color: $black;
                 }
                 a:hover{
@@ -159,12 +159,22 @@ body{
                 }
             }
         }
-        .artOpen{
+        .artists:hover{
             &::before{
-                transform: translate(-80%,5%) rotate(0deg);
+                transform: translate(-25%,5%) rotate(0deg);
+                opacity: 0;
             }
             ul{
-                height: 145px;
+                height: 142px;
+            }
+        }
+        .works:hover{
+            &::before{
+                transform: translate(-25%,5%) rotate(0deg);
+                opacity: 0;
+            }
+            ul{
+                height: 184px;
             }
         }
     }
@@ -241,7 +251,6 @@ body{
         color: $black;
     }
     li{
-        font-family: 'DINcondensed_Bold', 'Noto Serif TC', sans-serif;
         margin: 0px 5px;
         padding: 0px 5px 5px 5px;
         font-size: 18px;
@@ -250,8 +259,8 @@ body{
         &::after{
             content: '';
             width: 0%;
-            height: 2px;
-            border-radius: 2px;
+            height: 4px;
+            border-radius: 4px;
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -272,7 +281,7 @@ body{
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 160px;
+    width: 120px;
     margin: 36px 40px;
 }
 .cls-logo {
@@ -284,7 +293,7 @@ body{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 580px;
+    height: 460px;
     overflow: hidden;
     z-index: 3;
     
@@ -302,20 +311,20 @@ body{
     }
     .banner_nav_btn{
         position: absolute;
-        top: 58px;
+        top: 40px;
         left: 40px;
         z-index: 3;
-        font-size: 28px;
+        font-size: 26px;
         li{
-            font-family: 'DINcondensed_Bold', 'Noto Serif TC', sans-serif;
             list-style: none;
-            margin: 0px 0px 16px 0px;
-            font-weight: 700;
+            margin: 0px 0px 8px 0px;
+            font-weight: 500;
             letter-spacing: 1px;
             color: $white;
             transition: 0.3s;
             cursor: pointer;
             a{
+                font-weight: 500;
                 transition: 0.3s;
                 text-decoration: none;
                 color: $white;
@@ -327,14 +336,16 @@ body{
                 color: $green;
             }
         }
-        .artists{
+        .artists, .works{
             transition: all 0.3s;
             ul{
                 transition: all 0.3s;
                 height: 0;
                 overflow: hidden;
                 li{
-                    font-size: 24px;
+                    font-size: 18px;
+                    line-height: 1.4;
+                    padding-left: 8px;
                     &::before{
                         content: '- ';
                         position: relative;
@@ -347,19 +358,35 @@ body{
             &::before{
                 position: absolute;
                 content: "✖";
-                font-size: 20px;
-                right: 70px;
+                font-size: 16px;
+                font-weight: 600;
+                right: 66px;
                 display: inline-block;
-                transform: translate(0%,4%) rotate(45deg);
+                transform: translate(0%,2%) rotate(45deg);
                 transition: all 0.3s;
+            }
+        }
+        .works{
+            &::before{
+                right: 72px;
             }
         }
         .artOpen{
             &::before{
-                transform: translate(-20%,4%) rotate(0deg);
+                transform: translate(0%,2%) rotate(0deg);
+                opacity: 0;
             }
             ul{
-                height: 120px;
+                height: 100px;
+            }
+        }
+        .workOpen{
+            &::before{
+                transform: translate(-20%,4%) rotate(0deg);
+                opacity: 0;
+            }
+            ul{
+                height: 140px;
             }
         }
         .socialMedia{
@@ -553,7 +580,7 @@ input[type="radio"]{
             ul{
                 flex-direction: column;
                 li{
-                    font-size: 32px;
+                    font-size: 28px;
                     font-weight: 400;
                     letter-spacing: 2px;
                     margin: 0;
@@ -572,25 +599,42 @@ input[type="radio"]{
             flex: 1;
             justify-content: space-around;
             padding: 0px 0px 0px 52px;
-            .artists{
+            .artists, .works{
                 ul{
                     position: relative;
                     top: 8px;
-                    width: 180px;
+                    width: 200px;
                     li{
                         background-color: rgba($white,0.0);
-                        font-size: 20px;
+                        font-size: 18px;
                         border: 0px;
-                        padding: 8px;
+                        padding: 4px 8px;
+                        a{
+                            font-size: 18px;
+                        }
                     }
                 }
                 &::before{
-                    font-size: 24px;
+                    font-size: 20px;
                     display: inline-block;
                     transform: translate(120%,0%) rotate(45deg);
                 }
             }
             .artOpen{
+                color: $green;
+                &::before{
+                    transform: translate(120%,0%) rotate(0deg);
+                }
+                ul{
+                    height: 145px;
+                    li{
+                        a{
+                            color: $green;
+                        }
+                    }
+                }
+            }
+            .workOpen{
                 color: $green;
                 &::before{
                     transform: translate(120%,0%) rotate(0deg);

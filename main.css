@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap");
-@import url("https://use.typekit.net/cfw8pqb.css");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,21 +8,15 @@
   position: relative;
 }
 
-@font-face {
-  font-family: "DINcondensed_Bold";
-  src: url("font/DINCondensed-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: "Din Kursivschrift Breit";
-  font-style: normal;
-  font-weight: normal;
-  src: url("font/DinKursivschriftBreit.woff") format("woff");
-}
 body {
-  font-family: "din-condensed", "Noto Serif TC", sans-serif;
+  font-family: "Oswald", "Noto Serif TC", sans-serif;
   font-weight: 300;
   font-style: normal;
   height: auto;
+}
+
+.space {
+  height: 60vh;
 }
 
 ::-moz-selection {
@@ -46,7 +40,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px #231815 solid;
+  border-bottom: 1px #c7c7c7 solid;
   background-color: #fff;
   z-index: 2;
 }
@@ -76,11 +70,11 @@ body {
   display: flex;
 }
 .navList li {
-  font-family: "DINcondensed_Bold", "Noto Serif TC", sans-serif;
   list-style: none;
   margin: 0px 20px 0px 0px;
   padding: 0px 5px 5px 5px;
-  font-size: 28px;
+  font-weight: 400;
+  font-size: 24px;
   cursor: pointer;
 }
 .navList li::after {
@@ -99,6 +93,7 @@ body {
   width: 80%;
 }
 .navList li a {
+  font-weight: 400;
   text-decoration: none;
   color: #231815;
 }
@@ -108,65 +103,73 @@ body {
 .navList .listitem li {
   padding: 0px 16px;
 }
-.navList .listitem .artists {
-  width: 80px;
+.navList .listitem .artists, .navList .listitem .works {
   transition: all 0.3s;
 }
-.navList .listitem .artists::before {
+.navList .listitem .artists::before, .navList .listitem .works::before {
   content: "✖";
   position: absolute;
-  font-size: 20px;
+  font-size: 16px;
   top: 0%;
-  right: 0%;
+  right: -25%;
   display: inline-block;
-  transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-150%, 0%) rotate(45deg);
   transition: all 0.3s;
 }
-.navList .listitem .artists:hover::before {
+.navList .listitem .artists:hover::before, .navList .listitem .works:hover::before {
   color: #83ff00;
 }
-.navList .listitem .artists ul {
+.navList .listitem .artists ul, .navList .listitem .works ul {
   position: absolute;
-  top: 45px;
-  left: 0;
+  top: 48px;
+  left: 0%;
   display: flex;
   flex-direction: column;
   height: 0px;
   overflow: hidden;
   transition: all 0.3s;
 }
-.navList .listitem .artists ul li {
+.navList .listitem .artists ul li, .navList .listitem .works ul li {
   cursor: pointer;
   border-right: #7f7f7f 1px solid;
   border-left: #7f7f7f 1px solid;
   border-bottom: #7f7f7f 1px solid;
-  width: 180px;
-  padding: 8px 16px;
+  width: 140px;
+  padding: 0px 16px 4px;
   background-color: #fff;
   transition: 0.3s;
 }
-.navList .listitem .artists ul li::before {
+.navList .listitem .artists ul li::before, .navList .listitem .works ul li::before {
   content: "- ";
   position: relative;
 }
-.navList .listitem .artists ul li::after {
+.navList .listitem .artists ul li::after, .navList .listitem .works ul li::after {
   display: none;
 }
-.navList .listitem .artists ul li:hover {
+.navList .listitem .artists ul li:hover, .navList .listitem .works ul li:hover {
   background-color: #7f7f7f;
   color: #fff;
 }
-.navList .listitem .artists ul a {
+.navList .listitem .artists ul a, .navList .listitem .works ul a {
+  font-size: 20px;
   color: #231815;
 }
-.navList .listitem .artists ul a:hover {
+.navList .listitem .artists ul a:hover, .navList .listitem .works ul a:hover {
   color: #fff;
 }
-.navList .listitem .artOpen::before {
-  transform: translate(-80%, 5%) rotate(0deg);
+.navList .listitem .artists:hover::before {
+  transform: translate(-25%, 5%) rotate(0deg);
+  opacity: 0;
 }
-.navList .listitem .artOpen ul {
-  height: 145px;
+.navList .listitem .artists:hover ul {
+  height: 142px;
+}
+.navList .listitem .works:hover::before {
+  transform: translate(-25%, 5%) rotate(0deg);
+  opacity: 0;
+}
+.navList .listitem .works:hover ul {
+  height: 184px;
 }
 .navList #navId {
   position: relative;
@@ -238,7 +241,6 @@ body {
   color: #231815;
 }
 .language li {
-  font-family: "DINcondensed_Bold", "Noto Serif TC", sans-serif;
   margin: 0px 5px;
   padding: 0px 5px 5px 5px;
   font-size: 18px;
@@ -248,8 +250,8 @@ body {
 .language li::after {
   content: "";
   width: 0%;
-  height: 2px;
-  border-radius: 2px;
+  height: 4px;
+  border-radius: 4px;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -268,7 +270,7 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 160px;
+  width: 120px;
   margin: 36px 40px;
 }
 
@@ -280,7 +282,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 580px;
+  height: 460px;
   overflow: hidden;
   z-index: 3;
 }
@@ -298,22 +300,22 @@ body {
 }
 .banner .banner_nav_btn {
   position: absolute;
-  top: 58px;
+  top: 40px;
   left: 40px;
   z-index: 3;
-  font-size: 28px;
+  font-size: 26px;
 }
 .banner .banner_nav_btn li {
-  font-family: "DINcondensed_Bold", "Noto Serif TC", sans-serif;
   list-style: none;
-  margin: 0px 0px 16px 0px;
-  font-weight: 700;
+  margin: 0px 0px 8px 0px;
+  font-weight: 500;
   letter-spacing: 1px;
   color: #fff;
   transition: 0.3s;
   cursor: pointer;
 }
 .banner .banner_nav_btn li a {
+  font-weight: 500;
   transition: 0.3s;
   text-decoration: none;
   color: #fff;
@@ -324,38 +326,52 @@ body {
 .banner .banner_nav_btn li:hover {
   color: #83ff00;
 }
-.banner .banner_nav_btn .artists {
+.banner .banner_nav_btn .artists, .banner .banner_nav_btn .works {
   transition: all 0.3s;
 }
-.banner .banner_nav_btn .artists ul {
+.banner .banner_nav_btn .artists ul, .banner .banner_nav_btn .works ul {
   transition: all 0.3s;
   height: 0;
   overflow: hidden;
 }
-.banner .banner_nav_btn .artists ul li {
-  font-size: 24px;
+.banner .banner_nav_btn .artists ul li, .banner .banner_nav_btn .works ul li {
+  font-size: 18px;
+  line-height: 1.4;
+  padding-left: 8px;
 }
-.banner .banner_nav_btn .artists ul li::before {
+.banner .banner_nav_btn .artists ul li::before, .banner .banner_nav_btn .works ul li::before {
   content: "- ";
   position: relative;
 }
-.banner .banner_nav_btn .artists ul li:nth-child(1) {
+.banner .banner_nav_btn .artists ul li:nth-child(1), .banner .banner_nav_btn .works ul li:nth-child(1) {
   padding-top: 10px;
 }
-.banner .banner_nav_btn .artists::before {
+.banner .banner_nav_btn .artists::before, .banner .banner_nav_btn .works::before {
   position: absolute;
   content: "✖";
-  font-size: 20px;
-  right: 70px;
+  font-size: 16px;
+  font-weight: 600;
+  right: 66px;
   display: inline-block;
-  transform: translate(0%, 4%) rotate(45deg);
+  transform: translate(0%, 2%) rotate(45deg);
   transition: all 0.3s;
 }
+.banner .banner_nav_btn .works::before {
+  right: 72px;
+}
 .banner .banner_nav_btn .artOpen::before {
-  transform: translate(-20%, 4%) rotate(0deg);
+  transform: translate(0%, 2%) rotate(0deg);
+  opacity: 0;
 }
 .banner .banner_nav_btn .artOpen ul {
-  height: 120px;
+  height: 100px;
+}
+.banner .banner_nav_btn .workOpen::before {
+  transform: translate(-20%, 4%) rotate(0deg);
+  opacity: 0;
+}
+.banner .banner_nav_btn .workOpen ul {
+  height: 140px;
 }
 .banner .banner_nav_btn .socialMedia {
   display: flex;
@@ -539,7 +555,7 @@ input[type=radio] {
     flex-direction: column;
   }
   .navClass .navList ul li {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: 2px;
     margin: 0;
@@ -557,19 +573,22 @@ input[type=radio] {
     justify-content: space-around;
     padding: 0px 0px 0px 52px;
   }
-  .navClass .listitem .artists ul {
+  .navClass .listitem .artists ul, .navClass .listitem .works ul {
     position: relative;
     top: 8px;
-    width: 180px;
+    width: 200px;
   }
-  .navClass .listitem .artists ul li {
+  .navClass .listitem .artists ul li, .navClass .listitem .works ul li {
     background-color: rgba(255, 255, 255, 0);
-    font-size: 20px;
+    font-size: 18px;
     border: 0px;
-    padding: 8px;
+    padding: 4px 8px;
   }
-  .navClass .listitem .artists::before {
-    font-size: 24px;
+  .navClass .listitem .artists ul li a, .navClass .listitem .works ul li a {
+    font-size: 18px;
+  }
+  .navClass .listitem .artists::before, .navClass .listitem .works::before {
+    font-size: 20px;
     display: inline-block;
     transform: translate(120%, 0%) rotate(45deg);
   }
@@ -583,6 +602,18 @@ input[type=radio] {
     height: 145px;
   }
   .navClass .listitem .artOpen ul li a {
+    color: #83ff00;
+  }
+  .navClass .listitem .workOpen {
+    color: #83ff00;
+  }
+  .navClass .listitem .workOpen::before {
+    transform: translate(120%, 0%) rotate(0deg);
+  }
+  .navClass .listitem .workOpen ul {
+    height: 145px;
+  }
+  .navClass .listitem .workOpen ul li a {
     color: #83ff00;
   }
   .navClass .onTitem {
