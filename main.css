@@ -49,8 +49,9 @@ body {
   cursor: pointer;
   padding: 0px 20px 0px 40px;
 }
-.navClass .webLogo img {
+.navClass .webLogo svg {
   width: 220px;
+  color: #231815;
   fill: #231815;
   transform: translateY(4%);
 }
@@ -110,9 +111,9 @@ body {
 .navList .listitem .artists::before, .navList .listitem .works::before {
   content: "✖";
   position: absolute;
-  font-size: 16px;
+  font-size: 12px;
   top: 0%;
-  right: -25%;
+  right: -20%;
   display: inline-block;
   transform: translate(-150%, 0%) rotate(45deg);
   transition: all 0.3s;
@@ -136,7 +137,7 @@ body {
 }
 .navList .listitem .artists ul li, .navList .listitem .works ul li {
   cursor: pointer;
-  width: 140px;
+  width: 150px;
   margin: 0;
   padding: 0px 16px 4px;
   background-color: #fff;
@@ -257,8 +258,8 @@ body {
 .language li::after {
   content: "";
   width: 0%;
-  height: 4px;
-  border-radius: 4px;
+  height: 2px;
+  border-radius: 2px;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -733,8 +734,9 @@ input[type=radio] {
     flex-direction: column;
     align-items: end;
     width: calc(100% - 20px);
-    height: calc(100vh - 100px);
-    padding: 24px 10px;
+    overflow: auto;
+    height: 100vh;
+    padding: 20px 10px;
   }
   .navClass .navList ul {
     justify-content: start;
@@ -760,7 +762,7 @@ input[type=radio] {
   .navClass .listitem .artists ul li, .navClass .listitem .works ul li {
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
-    padding: 6px 8px;
+    padding: 6px 0px;
   }
   .navClass .listitem .artists::after, .navClass .listitem .works::after {
     position: absolute;
@@ -782,6 +784,7 @@ input[type=radio] {
     border-top: 1px solid #fff;
     margin: 0px auto;
     padding: 12px;
+    padding-bottom: 48px;
     flex: 1;
   }
   .navClass .onTitem .carousel-manual {
@@ -800,7 +803,7 @@ input[type=radio] {
   }
   .navClass #navId {
     position: relative;
-    bottom: 8px;
+    bottom: 100px;
     right: 0px;
   }
   .navClass .language {
