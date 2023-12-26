@@ -40,8 +40,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px #c7c7c7 solid;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(7.5px);
+          backdrop-filter: blur(7.5px);
   z-index: 2;
 }
 .navClass .webLogo {
@@ -128,13 +129,15 @@ body {
   height: 0px;
   overflow: hidden;
   transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.43);
+  border-radius: 16px;
+  -webkit-backdrop-filter: blur(7.5px);
+          backdrop-filter: blur(7.5px);
 }
 .navList .listitem .artists ul li, .navList .listitem .works ul li {
   cursor: pointer;
-  border-right: #7f7f7f 1px solid;
-  border-left: #7f7f7f 1px solid;
-  border-bottom: #7f7f7f 1px solid;
   width: 140px;
+  margin: 0;
   padding: 0px 16px 4px;
   background-color: #fff;
   transition: 0.3s;
@@ -150,26 +153,30 @@ body {
   background-color: #7f7f7f;
   color: #fff;
 }
+.navList .listitem .artists ul li:hover a, .navList .listitem .works ul li:hover a {
+  color: #fff;
+}
 .navList .listitem .artists ul a, .navList .listitem .works ul a {
   font-size: 20px;
   color: #231815;
-}
-.navList .listitem .artists ul a:hover, .navList .listitem .works ul a:hover {
-  color: #fff;
 }
 .navList .listitem .artists:hover::before {
   transform: translate(-25%, 5%) rotate(0deg);
   opacity: 0;
 }
 .navList .listitem .artists:hover ul {
-  height: 142px;
+  height: 120px;
+  border: 1px solid rgba(255, 255, 255, 0.43);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .navList .listitem .works:hover::before {
   transform: translate(-25%, 5%) rotate(0deg);
   opacity: 0;
 }
 .navList .listitem .works:hover ul {
-  height: 184px;
+  height: 158px;
+  border: 1px solid rgba(255, 255, 255, 0.43);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .navList #navId {
   position: relative;
@@ -466,25 +473,25 @@ input[type=radio] {
   transform: translateY(0px);
 }
 #numBtn1[type=radio]:checked ~ .tour-carousel-group .textGray {
-  transform: translateY(-55px);
+  transform: translateY(-60px);
 }
 
 #numBtn2[type=radio]:checked ~ .tour-carousel-group .textWhite {
-  transform: translateY(-55px);
+  transform: translateY(-60px);
 }
 #numBtn2[type=radio]:checked ~ .tour-carousel-group .textGray {
-  transform: translateY(-110px);
+  transform: translateY(-120px);
 }
 
 #numBtn3[type=radio]:checked ~ .tour-carousel-group .textWhite {
-  transform: translateY(-110px);
+  transform: translateY(-120px);
 }
 #numBtn3[type=radio]:checked ~ .tour-carousel-group .textGray {
-  transform: translateY(-165px);
+  transform: translateY(-180px);
 }
 
 #numBtn4[type=radio]:checked ~ .tour-carousel-group .textWhite {
-  transform: translateY(-165px);
+  transform: translateY(-180px);
 }
 #numBtn4[type=radio]:checked ~ .tour-carousel-group .textGray {
   transform: translateY(0px);
@@ -576,7 +583,12 @@ input[type=radio] {
   .navClass .listitem .artists ul, .navClass .listitem .works ul {
     position: relative;
     top: 8px;
-    width: 200px;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border-radius: 0px;
   }
   .navClass .listitem .artists ul li, .navClass .listitem .works ul li {
     background-color: rgba(255, 255, 255, 0);
@@ -584,37 +596,49 @@ input[type=radio] {
     border: 0px;
     padding: 4px 8px;
   }
+  .navClass .listitem .artists ul li:hover, .navClass .listitem .works ul li:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
   .navClass .listitem .artists ul li a, .navClass .listitem .works ul li a {
+    color: #83ff00;
     font-size: 18px;
+    display: block;
+  }
+  .navClass .listitem .artists ul li::before, .navClass .listitem .works ul li::before {
+    content: "";
   }
   .navClass .listitem .artists::before, .navClass .listitem .works::before {
+    content: " ";
+  }
+  .navClass .listitem .artists::after, .navClass .listitem .works::after {
+    content: "✖";
+    position: absolute;
+    top: 16px;
+    left: 20%;
+    transform: translate(50%, 50%) rotate(-45deg);
     font-size: 20px;
-    display: inline-block;
-    transform: translate(120%, 0%) rotate(45deg);
+    font-weight: 600;
   }
-  .navClass .listitem .artOpen {
+  .navClass .listitem .works:hover ul, .navClass .listitem .artists:hover ul {
+    border: none;
+    box-shadow: none;
+  }
+  .navClass .listitem .artists:hover, .navClass .listitem .works:hover, .navClass .listitem .artOpen, .navClass .listitem .workOpen {
     color: #83ff00;
   }
-  .navClass .listitem .artOpen::before {
-    transform: translate(120%, 0%) rotate(0deg);
+  .navClass .listitem .artists:hover ul, .navClass .listitem .works:hover ul, .navClass .listitem .artOpen ul, .navClass .listitem .workOpen ul {
+    height: 116px;
   }
-  .navClass .listitem .artOpen ul {
-    height: 145px;
-  }
-  .navClass .listitem .artOpen ul li a {
+  .navClass .listitem .artists:hover ul li a, .navClass .listitem .works:hover ul li a, .navClass .listitem .artOpen ul li a, .navClass .listitem .workOpen ul li a {
     color: #83ff00;
   }
-  .navClass .listitem .workOpen {
-    color: #83ff00;
+  .navClass .listitem .artists:hover::after, .navClass .listitem .works:hover::after, .navClass .listitem .artOpen::after, .navClass .listitem .workOpen::after {
+    top: 28px;
+    transform: translate(50%, 50%) rotate(-90deg);
+    opacity: 0;
   }
-  .navClass .listitem .workOpen::before {
-    transform: translate(120%, 0%) rotate(0deg);
-  }
-  .navClass .listitem .workOpen ul {
-    height: 145px;
-  }
-  .navClass .listitem .workOpen ul li a {
-    color: #83ff00;
+  .navClass .listitem .works:hover ul, .navClass .listitem .workOpen ul {
+    height: 136px;
   }
   .navClass .onTitem {
     flex: 1.2;
@@ -720,9 +744,7 @@ input[type=radio] {
     padding: 0px 0px 28px 0px;
   }
   .navClass .navList .logo {
-    display: block;
-    position: absolute;
-    bottom: 24px;
+    display: none;
   }
   .navClass .listitem {
     justify-content: space-around;
@@ -735,20 +757,26 @@ input[type=radio] {
   .navClass .listitem .lg_ontour {
     display: none;
   }
-  .navClass .listitem .artists ul li {
+  .navClass .listitem .artists ul li, .navClass .listitem .works ul li {
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
-    padding: 8px;
+    padding: 6px 8px;
   }
-  .navClass .listitem .artists::before {
+  .navClass .listitem .artists::after, .navClass .listitem .works::after {
+    position: absolute;
     font-size: 24px;
-    transform: translate(150%, 8%) rotate(45deg);
+    top: 20px;
+    left: 100px;
+    transform: translate(0%, 0%) rotate(-45deg);
   }
-  .navClass .listitem .artOpen::before {
-    transform: translate(150%, 8%) rotate(0deg);
+  .navClass .listitem .artists:hover::before, .navClass .listitem .works:hover::before, .navClass .listitem .artOpen::before, .navClass .listitem .workOpen::before {
+    transform: translate(0%, 0%) rotate(-90deg);
   }
-  .navClass .listitem .artOpen ul {
-    height: 110px;
+  .navClass .listitem .artists:hover ul, .navClass .listitem .works:hover ul, .navClass .listitem .artOpen ul, .navClass .listitem .workOpen ul {
+    height: 120px;
+  }
+  .navClass .listitem .works:hover ul, .navClass .listitem .workOpen ul {
+    height: 148px;
   }
   .navClass .onTitem {
     border-top: 1px solid #fff;

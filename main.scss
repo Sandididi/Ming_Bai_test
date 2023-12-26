@@ -43,8 +43,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px #c7c7c7 solid;
-    background-color: #fff;
+    background: rgba($white, 0.6);
+    backdrop-filter: blur(7.5px);
     z-index: 2;
     .webLogo{
         cursor: pointer;
@@ -129,12 +129,13 @@ body{
                 height: 0px;
                 overflow: hidden;
                 transition: all 0.3s;
+                border: 1px solid rgba(255, 255, 255, 0.43);
+                border-radius: 16px;
+                backdrop-filter: blur(7.5px);
                 li{
                     cursor: pointer;
-                    border-right: $gray 1px solid;
-                    border-left: $gray 1px solid;
-                    border-bottom: $gray 1px solid;
                     width: 140px;
+                    margin: 0;
                     padding: 0px 16px 4px;
                     background-color: $white;
                     transition: 0.3s;
@@ -148,15 +149,16 @@ body{
                     &:hover{
                         background-color: $gray;
                         color: $white;
+                        a{
+                            color: $white;
+                        }
                     }
                 }
                 a{
                     font-size: 20px;
                     color: $black;
                 }
-                a:hover{
-                    color: $white;
-                }
+                
             }
         }
         .artists:hover{
@@ -165,7 +167,9 @@ body{
                 opacity: 0;
             }
             ul{
-                height: 142px;
+                height: 120px;
+                border: 1px solid rgba(255, 255, 255, 0.43);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
         }
         .works:hover{
@@ -174,7 +178,9 @@ body{
                 opacity: 0;
             }
             ul{
-                height: 184px;
+                height: 158px;
+                border: 1px solid rgba(255, 255, 255, 0.43);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
         }
     }
@@ -484,28 +490,28 @@ input[type="radio"]{
         transform: translateY(0px);
     }
     .textGray{
-        transform: translateY(-55px);
+        transform: translateY(-60px);
     }
 }
 #numBtn2[type="radio"]:checked ~ .tour-carousel-group{
     .textWhite{
-        transform: translateY(-55px);
+        transform: translateY(-60px);
     }
     .textGray{
-        transform: translateY(-110px);
+        transform: translateY(-120px);
     }
 }
 #numBtn3[type="radio"]:checked ~ .tour-carousel-group{
     .textWhite{
-        transform: translateY(-110px);
+        transform: translateY(-120px);
     }
     .textGray{
-        transform: translateY(-165px);
+        transform: translateY(-180px);
     }
 }
 #numBtn4[type="radio"]:checked ~ .tour-carousel-group{
     .textWhite{
-        transform: translateY(-165px);
+        transform: translateY(-180px);
     }
     .textGray{
         transform: translateY(0px);
@@ -603,49 +609,67 @@ input[type="radio"]{
                 ul{
                     position: relative;
                     top: 8px;
-                    width: 200px;
+                    height: 0;
+                    background-color: rgba($white,0.0);
+                    border: none;
+                    backdrop-filter: none;
+                    border-radius: 0px;
                     li{
                         background-color: rgba($white,0.0);
                         font-size: 18px;
                         border: 0px;
                         padding: 4px 8px;
+                        &:hover{
+                            background-color: rgba($white,0.0);
+                        }
                         a{
+                            color: $green;
                             font-size: 18px;
+                            display: block;
+                        }
+                        &::before{
+                            content: '';
                         }
                     }
                 }
                 &::before{
+                    content: " ";
+                }
+                &::after{
+                    content: "✖";
+                    position: absolute;
+                    top: 16px;
+                    left: 20%;
+                    transform: translate(50%, 50%) rotate(-45deg);
                     font-size: 20px;
-                    display: inline-block;
-                    transform: translate(120%,0%) rotate(45deg);
+                    font-weight: 600;
                 }
             }
-            .artOpen{
-                color: $green;
-                &::before{
-                    transform: translate(120%,0%) rotate(0deg);
-                }
+            .works:hover, .artists:hover{
                 ul{
-                    height: 145px;
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+            .artists:hover, .works:hover,.artOpen, .workOpen{
+                color: $green;
+                ul{
+                    height: 116px;
                     li{
                         a{
                             color: $green;
                         }
                     }
                 }
-            }
-            .workOpen{
-                color: $green;
-                &::before{
-                    transform: translate(120%,0%) rotate(0deg);
+                &::after{
+                    top: 28px;
+                    transform: translate(50%, 50%) rotate(-90deg);
+                    opacity: 0;
                 }
+            }
+            .works:hover, .workOpen{
                 ul{
-                    height: 145px;
-                    li{
-                        a{
-                            color: $green;
-                        }
-                    }
+                    height: 136px;
                 }
             }
         }
@@ -766,11 +790,10 @@ input[type="radio"]{
                     font-size: 36px;
                     padding: 0px 0px 28px 0px;
                 }
+                
             }
             .logo{
-                display: block;
-                position: absolute;
-                bottom:  24px;
+                display: none;
             }
         }
         .listitem{
@@ -783,25 +806,34 @@ input[type="radio"]{
             .lg_ontour{
                 display: none;
             }
-            .artists{
+            .artists, .works{
                 ul{
                     li{
                         background-color: rgba($white,0.0);
                         border: 0px;
-                        padding: 8px;
+                        padding: 6px 8px;
                     }
                 }
-                &::before{
+                &::after{
+                    position: absolute;
                     font-size: 24px;
-                    transform: translate(150%,8%) rotate(45deg);
+                    top: 20px;
+                    left: 100px;
+                    transform: translate(0%,0%) rotate(-45deg);
                 }
             }
-            .artOpen{
+
+            .artists:hover, .works:hover, .artOpen,.workOpen{
                 &::before{
-                    transform: translate(150%,8%) rotate(0deg);
+                    transform: translate(0%,0%) rotate(-90deg);
                 }
                 ul{
-                    height: 110px;
+                    height: 120px;
+                }
+            }
+            .works:hover, .workOpen{
+                ul{
+                    height: 148px;
                 }
             }
         }
