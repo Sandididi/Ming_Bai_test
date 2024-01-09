@@ -1,0 +1,35 @@
+.content {
+  top: 90px;
+  padding: 0px 40px;
+}
+.content h3 {
+  font-size: 42px;
+  padding: 0;
+}
+
+.y-press {
+  margin: 20px 0px 0px;
+}
+.y-press h3 {
+  font-size: 24px;
+  padding: 40px 0px 10px;
+}
+.y-press a {
+  display: block;
+  border-bottom: solid 1px rgba(127, 127, 127, 0.8);
+  text-decoration: none;
+  transition: all 0.2s;
+  padding: 8px 0px;
+}
+.y-press a p {
+  transition: all 0.2s;
+  color: #231815;
+  padding: 12px 4px;
+  text-align: left;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.y-press a:hover p {
+  color: #83ff00;
+  background-color: rgba(35, 24, 21, 0.5);
+}/*# sourceMappingURL=press.css.map */
