@@ -444,8 +444,9 @@ body{
     }
 }
 ///內文
-.content{
+.container{
     top: 460px;
+    position: relative;
     margin: 0px auto;
     padding-top: 20px;
     text-align: center;
@@ -463,66 +464,11 @@ body{
         font-size: 32px;
         font-weight: 700;
         text-align: left;
-        padding: 0px 20px;
+        padding: 0px 10px;
         line-height: 1.8;
     }
 }
-.news-index{
-    cursor: grab;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 24%;
-    margin-top: 20px;
-    padding: 0px 20px 8px;
-    gap: 16px;
-    height: 300px;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    
-    .n-project{
-        flex: 1;
-        text-align: left;
-        border-right: $black 1px solid;
-        &:hover{
-            img{
-                transform: scale(1.1);
-            }
-        }
-    }
-    h4{
-        font-size: 20px;
-        font-weight: 500;
-    }
 
-    .n-img{
-        margin: 8px 0px;
-        overflow: hidden;
-        width: 280px;
-    }
-    img{
-        inline-size: 100%;
-        aspect-ratio: 16/9;
-        object-fit: cover;
-        transition: all 0.3s;
-    }
-    .loc{
-        font-weight: 400;
-    }
-    .time_proj{
-        width: 280px;
-        display: flex;
-        justify-content: space-between;
-        .time{
-            font-weight: 500;
-        }
-        .proj{
-            padding-left: 12px;
-        }
-    }
-    .n-project:nth-child(5){
-        border-right: 0px;
-    }
-}
 ///footer
 .footerspace{
     height: 200px;
@@ -813,7 +759,7 @@ input[type="radio"]{
             display: none;
         }
     }
-    .content{
+    .container{
         padding: 20px 40px;
     }
     
@@ -953,12 +899,10 @@ input[type="radio"]{
         width: 120px;
         margin: 15px 17px;
     }
-    .content{
+    .container{
         padding: 20px 16px;
         h3{
-            width: 320px;
-            padding: 0;
-            margin: 0 auto;
+            display: block;
         }
     }
     .footer{

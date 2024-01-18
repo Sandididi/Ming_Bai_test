@@ -1,0 +1,120 @@
+$white:#fff;
+$black:#231815;
+$green:#83ff00;
+$gray:#7f7f7f;
+$dark-gray:#292423;
+
+.Hori_items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: grab;
+}
+  
+.Hori_items.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+.item {
+  display: inline-block;
+  max-width: 400px;
+  margin: 2em 0em 3em;
+  margin-left: 1.5em;
+  text-decoration: none;
+  text-align: left;
+  color: $black;
+  border-right: $black 1px solid;
+  padding-right: 1.5em;
+  h4{
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 2em;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0;
+  }
+  .n-img{
+      margin: 8px 0px;
+      overflow: hidden;
+      width: 400px;
+      display: block;
+  }
+  img{
+    
+      width: 100%;
+      inline-size: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      transition: all 0.3s;
+  }
+  .loc{
+    display: block;
+      font-weight: 400;
+  }
+  .time_proj{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .time{
+          font-weight: 500;
+      }
+      .proj{
+          padding-left: 12px;
+      }
+  }
+  &:hover{
+      img{
+          transform: scale(1.1);
+      }
+  }
+}
+
+.item:first-child{
+    margin-left: 0;
+}
+.item:last-child{
+    padding-right: 0;
+    border-right: 0;
+}
+
+@media(max-width:720px){
+    .sliderTit{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .Hori_items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;  
+        overflow-x: hidden;  
+        width: 100%;
+    }
+    .item{
+        position: relative;
+        border: 0px;
+        width: 100%;
+        min-width: auto;
+        max-width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0.5em 0;
+        padding: 1em 0;
+        .n-img{
+            margin: 8px 0px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .time_proj{
+            width: 100%;
+        }
+    }
+}

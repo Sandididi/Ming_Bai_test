@@ -1,0 +1,116 @@
+.Hori_items {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: grab;
+}
+
+.Hori_items.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.item {
+  display: inline-block;
+  max-width: 400px;
+  margin: 2em 0em 3em;
+  margin-left: 1.5em;
+  text-decoration: none;
+  text-align: left;
+  color: #231815;
+  border-right: #231815 1px solid;
+  padding-right: 1.5em;
+}
+.item h4 {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 2em;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0;
+}
+.item .n-img {
+  margin: 8px 0px;
+  overflow: hidden;
+  width: 400px;
+  display: block;
+}
+.item img {
+  width: 100%;
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+.item .loc {
+  display: block;
+  font-weight: 400;
+}
+.item .time_proj {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.item .time_proj .time {
+  font-weight: 500;
+}
+.item .time_proj .proj {
+  padding-left: 12px;
+}
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.item:first-child {
+  margin-left: 0;
+}
+
+.item:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+@media (max-width: 720px) {
+  .sliderTit {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .Hori_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  .item {
+    position: relative;
+    border: 0px;
+    width: 100%;
+    min-width: auto;
+    max-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0.5em 0;
+    padding: 1em 0;
+  }
+  .item .n-img {
+    margin: 8px 0px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .item .time_proj {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Upcome.css.map */

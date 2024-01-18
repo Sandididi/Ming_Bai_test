@@ -428,82 +428,29 @@ body {
   font-size: 16px;
 }
 
-.content {
+.container {
   top: 460px;
+  position: relative;
   margin: 0px auto;
   padding-top: 20px;
   text-align: center;
   max-width: 1280px;
 }
-.content h2 {
+.container h2 {
   margin: 0;
   padding: 10;
   font-weight: 400;
 }
-.content p {
+.container p {
   margin: 0;
   padding: 20px;
 }
-.content h3 {
+.container h3 {
   font-size: 32px;
   font-weight: 700;
   text-align: left;
-  padding: 0px 20px;
+  padding: 0px 10px;
   line-height: 1.8;
-}
-
-.news-index {
-  cursor: grab;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 24%;
-  margin-top: 20px;
-  padding: 0px 20px 8px;
-  gap: 16px;
-  height: 300px;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-}
-.news-index .n-project {
-  flex: 1;
-  text-align: left;
-  border-right: #231815 1px solid;
-}
-.news-index .n-project:hover img {
-  transform: scale(1.1);
-}
-.news-index h4 {
-  font-size: 20px;
-  font-weight: 500;
-}
-.news-index .n-img {
-  margin: 8px 0px;
-  overflow: hidden;
-  width: 280px;
-}
-.news-index img {
-  inline-size: 100%;
-  aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.3s;
-}
-.news-index .loc {
-  font-weight: 400;
-}
-.news-index .time_proj {
-  width: 280px;
-  display: flex;
-  justify-content: space-between;
-}
-.news-index .time_proj .time {
-  font-weight: 500;
-}
-.news-index .time_proj .proj {
-  padding-left: 12px;
-}
-.news-index .n-project:nth-child(5) {
-  border-right: 0px;
 }
 
 .footerspace {
@@ -776,7 +723,7 @@ input[type=radio] {
   .banner .banner_lang_btn {
     display: none;
   }
-  .content {
+  .container {
     padding: 20px 40px;
   }
   input[type=checkbox]:checked ~ .toggleIcon .Mline1 {
@@ -891,13 +838,11 @@ input[type=radio] {
     width: 120px;
     margin: 15px 17px;
   }
-  .content {
+  .container {
     padding: 20px 16px;
   }
-  .content h3 {
-    width: 320px;
-    padding: 0;
-    margin: 0 auto;
+  .container h3 {
+    display: block;
   }
   .footer p {
     width: 30%;
