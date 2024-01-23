@@ -4,6 +4,9 @@ $green:#83ff00;
 $gray:#7f7f7f;
 $dark-gray:#292423;
 
+body{
+    position: relative;
+}
 
 .content{
     top: 90px;
@@ -19,12 +22,13 @@ $dark-gray:#292423;
         font-size: 24px;
         padding: 40px 0px 10px;
     }
-    a{
+    .linkdiv{
         display: block;
         border-bottom: solid 1px rgba($gray,0.8);
         text-decoration: none;
         transition: all 0.2s;
         padding: 6px 0px;
+        cursor: pointer;
         p{
             transition: all 0.2s;
             color: $black;
@@ -39,5 +43,96 @@ $dark-gray:#292423;
                 background-color: rgba($black,0.5);
             }
         }
+    }
+}
+.press-item{
+    position: relative;
+}
+.revealImg{
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+    right: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    pointer-events: none;
+    max-width: 400px;
+    img{
+        width: 100%;
+        filter: contrast(0.8) blur(8px);
+        opacity: 0.5;
+    }
+}
+.y-press{
+    .press-item:hover{
+        .revealImg{
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(12deg);
+            img{
+                filter: contrast(0.7) brightness(1.2);
+                opacity: 0.95;
+            }
+        }
+    }
+}
+
+.popup-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba($black,0.75);
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+    display: none;
+}
+.popup-image span{
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    font-size: 100px;
+    line-height: 60px;
+    padding: 8px;
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+}
+.popup-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #fff;
+    border-radius: 4px;
+    width: 50vw;
+    object-fit: cover;
+}
+
+@media(max-width:1140px){
+    .revealImg{
+        max-width: 260px;
+    }
+    .popup-image span{
+        top: 80px;
+        right: 40px;
+        font-size: 100px;
+        padding: 12px
+    }
+    .popup-image img{
+        width: 65vw;
+    }
+}
+
+@media(max-width:720px){
+    .revealImg{
+        display: none;
+    }
+    .popup-image span{
+        top: 60px;
+        right: 8px;
+        font-size: 80px;
+    }
+    .popup-image img{
+        width: 85vw;
     }
 }
