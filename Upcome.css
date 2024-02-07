@@ -13,6 +13,10 @@
   cursor: grab;
 }
 
+.Hori_items:hover {
+  background-color: rgba(236, 236, 236, 0.18);
+}
+
 .Hori_items.active {
   cursor: grabbing;
   cursor: -webkit-grabbing;

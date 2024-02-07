@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,11 +18,6 @@ body {
   font-weight: 300;
   font-style: normal;
   height: auto;
-  scroll-behavior: smooth;
-}
-
-.space {
-  height: 60vh;
 }
 
 ::-webkit-scrollbar {
@@ -27,12 +26,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c5c5c5;
+  background: #e0e0e0;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #7f7f7f;
+  background: #ffffff;
   border-radius: 3px;
 }
 
@@ -145,6 +144,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 0px;
+  opacity: 0;
   overflow: hidden;
   transition: all 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.43);
@@ -184,6 +184,7 @@ body {
 }
 .navList .listitem .artists:hover ul {
   height: 120px;
+  opacity: 1;
   border: 1px solid rgba(255, 255, 255, 0.43);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -193,6 +194,7 @@ body {
 }
 .navList .listitem .works:hover ul {
   height: 158px;
+  opacity: 1;
   border: 1px solid rgba(255, 255, 255, 0.43);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -433,7 +435,7 @@ body {
   top: 460px;
   position: relative;
   margin: 0px auto;
-  padding-top: 20px;
+  padding-top: 24px;
   text-align: center;
   max-width: 1280px;
 }
@@ -447,15 +449,71 @@ body {
   padding: 20px;
 }
 .container h3 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 500;
   text-align: left;
   padding: 0px 10px;
   line-height: 1.8;
 }
-
-.footerspace {
-  height: 200px;
+.container .indexTit {
+  margin-top: 100px;
+}
+.container .contact {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .contact div {
+  flex: 1;
+  display: inline;
+  padding: 0px 10px;
+}
+.container .contact div:nth-child(1) {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+}
+.container .contact div:nth-child(1) span {
+  display: block;
+}
+.container .contact div:nth-child(2) {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.container .contact div:nth-child(2) a {
+  color: #231815;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+.container .contact div:nth-child(2) a:hover {
+  color: #83ff00;
+}
+.container .contact .socialMail {
+  margin-right: 100px;
+}
+.container .contact .socialMedia {
+  margin-right: 20px;
+}
+.container .contact .socialMedia img {
+  width: 30px;
+}
+.container .contact .socialMedia a, .container .contact .socialMedia div {
+  display: inline;
+  width: 30px;
+  cursor: pointer;
+  padding: 8px;
+}
+.container .contact .socialMedia svg {
+  width: 30px;
+  fill: #231815;
+  transition: 0.1s;
+}
+.container .contact .socialMedia svg:hover {
+  fill: #83ff00;
 }
 
 .footer {
@@ -470,19 +528,6 @@ body {
   text-align: center;
   padding: 20px 0px;
   font-size: 14px;
-}
-.footer .socialMedia {
-  display: flex;
-  flex-direction: row;
-}
-.footer .socialMedia img {
-  width: 100%;
-}
-.footer .socialMedia li {
-  list-style: none;
-  width: 30px;
-  margin: 0px 4px;
-  cursor: pointer;
 }
 
 input[type=radio] {
@@ -610,6 +655,7 @@ input[type=radio] {
     position: relative;
     top: 8px;
     height: 0;
+    opacity: 1;
     background-color: rgba(255, 255, 255, 0);
     border: none;
     -webkit-backdrop-filter: none;
@@ -726,6 +772,36 @@ input[type=radio] {
   }
   .container {
     padding: 20px 40px;
+  }
+  .container .contact {
+    flex-direction: column;
+  }
+  .container .contact div {
+    padding: 8px 10px 32px;
+  }
+  .container .contact div:nth-child(1) span {
+    display: inline;
+  }
+  .container .contact div:nth-child(2) a {
+    font-size: 20px;
+    letter-spacing: 0px;
+  }
+  .container .contact div:nth-child(2) a:hover {
+    color: #83ff00;
+  }
+  .container .contact .socialMail {
+    margin-right: 20px;
+  }
+  .container .contact .socialMedia {
+    margin-right: 8px;
+  }
+  .container .contact .socialMedia img {
+    width: 30px;
+  }
+  .container .contact .socialMedia a, .container .contact .socialMedia div {
+    display: inline;
+    width: 30px;
+    cursor: pointer;
   }
   input[type=checkbox]:checked ~ .toggleIcon .Mline1 {
     transform: rotate(0deg);
@@ -844,6 +920,18 @@ input[type=radio] {
   }
   .container h3 {
     display: block;
+  }
+  .container .contact div:nth-child(2) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .container .contact .socialMail {
+    margin-right: 70px;
+  }
+  .container .contact .socialMedia {
+    margin-right: 0px;
+    margin-left: 20px;
   }
   .footer p {
     width: 30%;

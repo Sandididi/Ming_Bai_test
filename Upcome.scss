@@ -15,7 +15,12 @@ $dark-gray:#292423;
     will-change: transform;
     user-select: none;
     cursor: grab;
+    
 }
+.Hori_items:hover{
+    background-color: rgba(236, 236, 236, 0.18)
+}
+
   
 .Hori_items.active {
     cursor: grabbing;
