@@ -8,24 +8,25 @@ body {
 }
 .content h3 {
   font-size: 42px;
-  padding: 0;
+  padding: 16px 0px;
 }
 .content .about {
   position: relative;
 }
 .content .indexTit {
   margin-top: 60px;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 .content .ab_text {
   text-align: left;
   width: 100%;
-  height: 320px;
-  padding: 72px 0px;
+  max-width: 1000px;
+  height: 400px;
+  padding: 60px 0px;
 }
 .content .ab_text p {
-  padding: 32px 10px 0px;
   line-height: 2;
+  padding: 12px 0px;
 }
 .content .ab_text .shape {
   width: 60%;
@@ -36,11 +37,14 @@ body {
 .content .ab_img {
   position: absolute;
   width: 50%;
-  right: 0;
+  right: 40%;
   top: 0;
+  transform: translateX(50%);
 }
 .content .ab_img p {
+  text-align: center;
   padding: 0;
+  transform: translateY(130%);
 }
 .content .ab_img img {
   width: 100%;
@@ -51,7 +55,51 @@ body {
   display: block;
   bottom: 0;
   right: 0;
+  transform: translateY(-200%);
   font-size: 20px;
-  padding: 32px 10px 0px;
-  text-align: left;
+  text-align: right;
+}
+
+.footer {
+  margin-top: 300px;
+}
+
+@media (max-width: 1480px) {
+  .content .ab_img {
+    width: 60%;
+    right: 30%;
+    top: 0;
+  }
+  .content .ab_img p {
+    transform: translateY(50%);
+  }
+  .content .ab_img span {
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 1140px) {
+  .content .ab_img {
+    width: 50%;
+    right: 30%;
+    top: 90px;
+  }
+}
+@media (max-width: 720px) {
+  .content .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .ab_text {
+    padding: 32px 0px;
+  }
+  .content .ab_text .shape {
+    display: none;
+  }
+  .content .ab_img {
+    position: relative;
+    width: 100%;
+    right: 0%;
+    top: 0;
+    transform: translateX(0%);
+  }
 }/*# sourceMappingURL=about.css.map */
