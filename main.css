@@ -468,6 +468,7 @@ body {
   flex: 1;
   display: inline;
   padding: 0px 10px;
+  line-height: 32px;
 }
 .container .contact div:nth-child(1) {
   font-size: 18px;

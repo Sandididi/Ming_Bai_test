@@ -91,6 +91,7 @@ body {
   }
   .content .ab_text {
     padding: 32px 0px;
+    height: auto;
   }
   .content .ab_text .shape {
     display: none;
