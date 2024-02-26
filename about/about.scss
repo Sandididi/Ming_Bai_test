@@ -17,6 +17,7 @@ body{
     }
     .about{
         position: relative;
+        margin-bottom: 200px;
     }
     .indexTit{
         margin-top: 60px;
@@ -66,9 +67,86 @@ body{
         }
     }
 }
+.profilo{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    .intro, .artist_photo{
+        height: 100vh;
+        height: 720px;
+    }
+    .artist_photo{
+        position: sticky;
+        max-height: 100vh;
+        top: 58px;
+    }  
+    .intro{
+        position: relative;
+        margin-bottom: 46px;
+    }  
+    img{
+        height: 100%;
+    }
+    .conText{
+        max-width: 1000px;
+        padding: 0px 12px 0px 52px;
+        h2{
+            font-size: 42px;
+            font-weight: 400;
+        }
+        .identity{
+            font-size: 16px;
+            line-height: 32px;
+        }
+        p{
+            padding-top: 16px;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        .tags{
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            bottom: 0;
+            li{
+                height: 52px;
+                line-height: 52px;
+                list-style: none;
+                font-size: 26px;
+                padding: 0px 32px;
+                margin: 16px 20px 0px 0px;
+                border: 2px solid #231815;
+                border-radius: 26px;
+            }
+        }
+        h4{
+           font-size: 20px; 
+           font-weight: 600;
+           margin-bottom: 20px;
+           &::after{
+            content: url(../img/list-arow.svg);
+            width: 16px;
+            height: 16px;
+           }
+        }
+        .explist{
+            margin-bottom: 32px;
+            li{
+                font-size: 14px;
+                line-height: 20px;
+                list-style: none;
+                padding: 4px 0px;
+            }
+            span:nth-child(1){
+                font-weight: 400;
+            }
+        }
+    }
+}
+
 .footer{
     margin-top: 300px;
-
 }
 
 @media(max-width:1480px){
@@ -85,6 +163,7 @@ body{
             }
         }
     }
+    
 }
 
 @media(max-width:1140px){
@@ -93,6 +172,34 @@ body{
             width: 50%;
             right: 30%;
             top: 90px;
+        }
+        .about{
+            margin-bottom: 100px;
+        }
+    }
+    
+    .profilo{
+        flex-direction: column;
+        .artist_photo{
+            position: static;
+            max-height: none;
+            height: auto;
+            padding: 16px 36px;
+        }  
+        .intro{
+            height: auto;
+        }  
+        img{
+            height: auto;
+            width: 80vw;
+            max-width: 400px;
+        }
+        .conText{
+            padding: 0px 36px;
+            .tags{
+                position: relative;
+                margin-top: 24px;
+            }
         }
     }
 }
@@ -116,6 +223,23 @@ body{
             right: 0%;
             top: 0;
             transform: translateX(0%);
+        }
+    }
+    .profilo{
+        .artist_photo, .conText{
+            padding: 12px 0px;
+        }
+        .conText{
+            p{
+                font-size: 18px;
+            }
+            .explist{
+                li{
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 6px 0px;
+                }
+            }
         }
     }
 }

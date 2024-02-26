@@ -12,6 +12,7 @@ body {
 }
 .content .about {
   position: relative;
+  margin-bottom: 200px;
 }
 .content .indexTit {
   margin-top: 60px;
@@ -60,6 +61,84 @@ body {
   text-align: right;
 }
 
+.profilo {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.profilo .intro, .profilo .artist_photo {
+  height: 100vh;
+  height: 720px;
+}
+.profilo .artist_photo {
+  position: sticky;
+  max-height: 100vh;
+  top: 58px;
+}
+.profilo .intro {
+  position: relative;
+  margin-bottom: 46px;
+}
+.profilo img {
+  height: 100%;
+}
+.profilo .conText {
+  max-width: 1000px;
+  padding: 0px 12px 0px 52px;
+}
+.profilo .conText h2 {
+  font-size: 42px;
+  font-weight: 400;
+}
+.profilo .conText .identity {
+  font-size: 16px;
+  line-height: 32px;
+}
+.profilo .conText p {
+  padding-top: 16px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.profilo .conText .tags {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  bottom: 0;
+}
+.profilo .conText .tags li {
+  height: 52px;
+  line-height: 52px;
+  list-style: none;
+  font-size: 26px;
+  padding: 0px 32px;
+  margin: 16px 20px 0px 0px;
+  border: 2px solid #231815;
+  border-radius: 26px;
+}
+.profilo .conText h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.profilo .conText h4::after {
+  content: url(../img/list-arow.svg);
+  width: 16px;
+  height: 16px;
+}
+.profilo .conText .explist {
+  margin-bottom: 32px;
+}
+.profilo .conText .explist li {
+  font-size: 14px;
+  line-height: 20px;
+  list-style: none;
+  padding: 4px 0px;
+}
+.profilo .conText .explist span:nth-child(1) {
+  font-weight: 400;
+}
+
 .footer {
   margin-top: 300px;
 }
@@ -83,6 +162,33 @@ body {
     right: 30%;
     top: 90px;
   }
+  .content .about {
+    margin-bottom: 100px;
+  }
+  .profilo {
+    flex-direction: column;
+  }
+  .profilo .artist_photo {
+    position: static;
+    max-height: none;
+    height: auto;
+    padding: 16px 36px;
+  }
+  .profilo .intro {
+    height: auto;
+  }
+  .profilo img {
+    height: auto;
+    width: 80vw;
+    max-width: 400px;
+  }
+  .profilo .conText {
+    padding: 0px 36px;
+  }
+  .profilo .conText .tags {
+    position: relative;
+    margin-top: 24px;
+  }
 }
 @media (max-width: 720px) {
   .content .about {
@@ -102,5 +208,16 @@ body {
     right: 0%;
     top: 0;
     transform: translateX(0%);
+  }
+  .profilo .artist_photo, .profilo .conText {
+    padding: 12px 0px;
+  }
+  .profilo .conText p {
+    font-size: 18px;
+  }
+  .profilo .conText .explist li {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 6px 0px;
   }
 }/*# sourceMappingURL=about.css.map */
