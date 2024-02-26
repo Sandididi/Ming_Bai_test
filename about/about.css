@@ -178,12 +178,15 @@ body {
 }
 
 #bai .intro {
-  height: 100vh;
-  height: 720px;
+  height: auto;
 }
 #bai .artist_photo {
-  height: 60vh;
-  height: 400px;
+  height: auto;
+  width: 480px;
+}
+#bai img {
+  height: auto;
+  width: 480px;
 }
 
 .footer {
