@@ -87,11 +87,10 @@ body{
             flex-wrap: wrap;
             width: 100%;
             li{
-                height: 52px;
-                line-height: 52px;
+                line-height: 1.3;
                 list-style: none;
                 font-size: 26px;
-                padding: 0px 32px;
+                padding: 8px 32px;
                 margin: 16px 20px 0px 0px;
                 border: 2px solid #231815;
                 border-radius: 26px;
@@ -129,11 +128,10 @@ body{
             width: 100%;
             bottom: 0;
             li{
-                height: 52px;
-                line-height: 52px;
+                line-height: 1.3;
                 list-style: none;
                 font-size: 26px;
-                padding: 0px 32px;
+                padding: 8px 32px;
                 margin: 16px 20px 0px 0px;
                 border: 2px solid #231815;
                 border-radius: 26px;
@@ -300,6 +298,15 @@ body{
         .artist_photo, .conText{
             padding: 12px 0px;
         }
+        .artist_photo{
+            .tags{
+                li{
+                    line-height: 1.3;
+                    font-size: 22px;
+                    padding: 8px 24px;
+                }
+            }
+        }
         .conText{
             p{
                 font-size: 18px;
@@ -309,6 +316,13 @@ body{
                     font-size: 16px;
                     line-height: 24px;
                     padding: 6px 0px;
+                }
+            }
+            .tags{
+                li{
+                    line-height: 1;
+                    font-size: 22px;
+                    padding: 12px 24px;
                 }
             }
         }
