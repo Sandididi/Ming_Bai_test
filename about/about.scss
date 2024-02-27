@@ -166,31 +166,32 @@ body{
 .projectImg{
     margin-top: 70px;
     width: 100%;
+    overflow-x: scroll;
     ul{
         display: flex;
-        justify-content: space-around;
+        justify-content: start;
     }
     li{
         list-style: none;
-        flex: 1;
-        width: 100%;
-        height: 150px;
-        margin: 10px;
-        //aspect-ratio: 16/9;
-        background-color: #eff;
+        margin: 10px 20px 10px 0px;
+        img{
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
+        }
     }
 }
 #bai{
     .intro{
-        height: auto;
+        height: 56vh;
     }
     .artist_photo{
         height: auto;
-        width: 480px;
+        width: 560px;
     }
     img{
         height: auto;
-        width: 480px;
+        width: 560px;
     }
 }
 
@@ -251,6 +252,27 @@ body{
             }
         }
     }
+    .projectImg{
+        li{
+            img{
+                width: 200px;
+                height: 120px;
+                object-fit: cover;
+            }
+        }
+    }
+    #bai{
+        .intro{
+            height: auto;
+        }
+        .artist_photo{
+            height: auto;
+            width: auto;
+        }
+        img{
+            max-width: 560px;
+        }
+    }
 }
 
 @media(max-width:720px){
@@ -289,6 +311,12 @@ body{
                     padding: 6px 0px;
                 }
             }
+        }
+    }
+    #bai{
+        img{
+            max-width: none;
+            width: 100%;
         }
     }
 }
