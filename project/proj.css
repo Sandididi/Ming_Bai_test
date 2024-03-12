@@ -1,0 +1,12 @@
+body {
+  position: relative;
+}
+
+.content {
+  top: 90px;
+  padding: 0px 40px;
+}
+.content h3 {
+  font-size: 42px;
+  padding: 0;
+}/*# sourceMappingURL=proj.css.map */
