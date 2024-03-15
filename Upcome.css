@@ -57,7 +57,7 @@
      object-fit: cover;
   transition: all 0.3s;
 }
-.item .loc {
+.item .proj {
   display: block;
   font-weight: 400;
 }
@@ -69,7 +69,7 @@
 .item .time_proj .time {
   font-weight: 500;
 }
-.item .time_proj .proj {
+.item .time_proj .loc {
   padding-left: 12px;
 }
 .item:hover img {

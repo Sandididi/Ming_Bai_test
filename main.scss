@@ -489,8 +489,15 @@ body{
             font-size: 18px;
             font-weight: 300;
             text-align: left;
-            span{
-                display: block;
+            a{
+                color: $black;
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 32px;
+                letter-spacing: 1px;
+                &:hover{
+                    color: $green;
+                }
             }
         }
         div:nth-child(2){
@@ -498,16 +505,7 @@ body{
             justify-content: end;
             align-items: center;
         }
-        div:nth-child(2) a{
-            color: $black;
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 32px;
-            letter-spacing: 1px;
-            &:hover{
-                color: $green;
-            }
-        }
+        
         .socialMail{
             margin-right: 100px;
         }
@@ -814,15 +812,11 @@ input[type="radio"]{
     .container{
         padding: 20px 40px;
         .contact{
-            flex-direction: column;
+            
             div{
                 padding: 8px 10px 32px;
             }
-            div:nth-child(1){
-                span{
-                    display: inline;
-                }
-            }
+            
             div:nth-child(2) a{
                 font-size: 20px;
                 letter-spacing: 0px;
@@ -989,18 +983,26 @@ input[type="radio"]{
             display: block;
         }
         .contact{
+            margin-top: 16px;
+            div{
+                width: 100%;
+                padding: 10px 0px;
+            }
+            div:nth-child(1){
+                a{
+                    margin: 0;
+                    display: block;
+                    text-align: left;
+                    padding: 10px;
+                    font-size: 26px;
+                }
+            }
             div:nth-child(2){
                 display: flex;
                 width: 100%;
-                justify-content: space-between;
+                justify-content: space-evenly;
             }
-            .socialMail{
-                margin-right: 70px;
-            }
-            .socialMedia{
-                margin-right: 0px;
-                margin-left: 20px;
-            }
+           
         }
     }
     .footer{

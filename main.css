@@ -475,23 +475,20 @@ body {
   font-weight: 300;
   text-align: left;
 }
-.container .contact div:nth-child(1) span {
-  display: block;
-}
-.container .contact div:nth-child(2) {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.container .contact div:nth-child(2) a {
+.container .contact div:nth-child(1) a {
   color: #231815;
   text-decoration: none;
   font-weight: 300;
   font-size: 32px;
   letter-spacing: 1px;
 }
-.container .contact div:nth-child(2) a:hover {
+.container .contact div:nth-child(1) a:hover {
   color: #83ff00;
+}
+.container .contact div:nth-child(2) {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 .container .contact .socialMail {
   margin-right: 100px;
@@ -774,14 +771,8 @@ input[type=radio] {
   .container {
     padding: 20px 40px;
   }
-  .container .contact {
-    flex-direction: column;
-  }
   .container .contact div {
     padding: 8px 10px 32px;
-  }
-  .container .contact div:nth-child(1) span {
-    display: inline;
   }
   .container .contact div:nth-child(2) a {
     font-size: 20px;
@@ -922,17 +913,24 @@ input[type=radio] {
   .container h3 {
     display: block;
   }
+  .container .contact {
+    margin-top: 16px;
+  }
+  .container .contact div {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .container .contact div:nth-child(1) a {
+    margin: 0;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    font-size: 26px;
+  }
   .container .contact div:nth-child(2) {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-  }
-  .container .contact .socialMail {
-    margin-right: 70px;
-  }
-  .container .contact .socialMedia {
-    margin-right: 0px;
-    margin-left: 20px;
+    justify-content: space-evenly;
   }
   .footer p {
     width: 30%;
